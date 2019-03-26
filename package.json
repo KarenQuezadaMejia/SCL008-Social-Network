@@ -1,10 +1,13 @@
 {
-  "name": "jason",
+  "name": "social-network",
   "version": "1.0.0",
-  "description": "network project",
-  "main": "main.js",
+  "description": "social network project",
+  "main": "src/index.html",
   "scripts": {
-    "test": "firebase"
+    "test": "jest--coverage",
+    "slint": "eslint ext .js src/test",
+    "htmlhint": "htmlhint src/*.html",
+    "deploy": "gh-pages -d src/"
   },
   "repository": {
     "type": "git",
