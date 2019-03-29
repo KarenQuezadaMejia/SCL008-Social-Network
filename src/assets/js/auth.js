@@ -1,3 +1,4 @@
+
 //autentificación firebase
 
 /* 1.Crearemos dos funciones que simularán el login con google y
@@ -12,6 +13,8 @@ export const createAccount = ()=>{
     return 'Cuenta creada OK';
 }
 
+
 export const loginSession=()=>{
     return 'Iniciar sesión'
 }
+

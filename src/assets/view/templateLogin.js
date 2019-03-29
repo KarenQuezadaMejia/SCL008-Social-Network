@@ -1,3 +1,4 @@
+
 //Manejo del DOM
 /*
 2.Crear la plantilla estructural del html que representa al login.

@@ -1,4 +1,11 @@
 
+/*
+2. Crear plantilla estructural de html que representa al login.
+Tenemos que importar la función que creamos en el auth.j(createAccount)
+*/
+
+
+
 import{createAccount} from '../js/auth.js';
 
 export const templateCreate =() =>{
