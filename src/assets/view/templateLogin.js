@@ -10,8 +10,7 @@ import {loginGoogle} from '../js/auth.js';
 //porque el archivo runInContext.js luego lo va a TransformStream
 export const templateLogin =() =>{
     const containerLogin=document.createElement('div')          //esta despues se le pasa al html
-    const contentLogin= `<p>Login con Google </p>
-                         <button id='login'>Loguealo </button>`   //contenido del login
+    const contentLogin= `<button id='login'>Conectar con gmail </button>`   //contenido del login
 
 
 //pasar el contenido al div
