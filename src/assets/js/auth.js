@@ -12,3 +12,9 @@ export const  loginGoogle=()=> {
 export const createAccount = ()=>{
     return 'Cuenta creada OK';
 }
+
+
+export const loginSession=()=>{
+    return 'Iniciar sesión'
+}
+
