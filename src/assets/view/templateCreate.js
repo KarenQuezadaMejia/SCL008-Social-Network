@@ -10,8 +10,7 @@ import{createAccount} from '../js/auth.js';
 
 export const templateCreate =() =>{
     const containerCreate=document.createElement('div')          //esta despues se le pasa al html
-    const contentCreate= `<p>Crear cuenta </p>
-                          <button id='create'>Crear cuenta </button>`   //contenido del login
+    const contentCreate= `<p>Si no tienes cuenta regístrate aquí </p>`   //contenido del login
 
 
 //pasar el contenido al div
