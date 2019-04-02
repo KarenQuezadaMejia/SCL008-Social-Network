@@ -1,0 +1,35 @@
+[debug] [2019-03-28T21:50:38.838Z] ----------------------------------------------------------------------
+[debug] [2019-03-28T21:50:38.843Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hites\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2019-03-28T21:50:38.843Z] CLI Version:   6.5.0
+[debug] [2019-03-28T21:50:38.843Z] Platform:      win32
+[debug] [2019-03-28T21:50:38.843Z] Node Version:  v11.9.0
+[debug] [2019-03-28T21:50:38.845Z] Time:          Thu Mar 28 2019 18:50:38 GMT-0300 (GMT-03:00)
+[debug] [2019-03-28T21:50:38.845Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-03-28T21:50:38.980Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-03-28T21:50:38.981Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\hites\Desktop\LABORATORIA\SCL008-Social-Network
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2019-03-28T21:50:39.089Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?page_size=100  
+ 
+[debug] [2019-03-28T21:50:41.023Z] <<< HTTP RESPONSE 200
