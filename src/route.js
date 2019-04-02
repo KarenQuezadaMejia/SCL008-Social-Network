@@ -1,21 +1,23 @@
 
 import {templateLoginGmail} from './assets/view/templateLogin.js';
 import {templateCreate} from './assets/view/templateCreate.js';
+/*
+  crear una función que reciba el hash (#) y según el match retorne otra función que va a imprimir el template en el html
+*/
 
-/*Crear una función que reciba el hash (#) y según el match o la coincidencia
-retorne otra función que va a imprimir el template en el html*/
-
-const changeRouter=(hash)=>{
-    if(hash=== '#/login'){
-        return showTemplate(hash);
-    }
+const changeRouter = (hash) => {
+  if (hash === '#/login') {
+    return showTemplate(hash);
+  }
     if(hash==='#/loginSession'){
         return showTemplate(hash);
     }
     if(hash==='#/create'){
         return showTemplate(hash);
     }
-}
+
+
+  }
 
 
 //Imprimirá el template en el html
@@ -38,17 +40,17 @@ const showTemplate =(hash)=>{
    
 }
 
-/*Inicializar las rutas para que se ejecute nuestra función changeRouter() para que se ejecute el showTemplate()*/
+// inicializar las rutas para que se ejecute changeRouter() y en su defecto showTemplate()
 
-export const initRouter=()=>{
-    window.addEventListener('load', changeRouter(window.location.hash));    //se le pasa como parámetro el hash que en ese momento cargo la página
-//método que reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter
-if('onhashchange' in window){
-    window.onhashchange=()=>{
-        changeRouter(window.location.hash)
+export const initRouter = () => {
+  window.addEventListener('load', changeRouter(window.location.hash));
+
+  // reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter
+  if ('onhashchange' in window) {
+    window.onhashchange = () => {
+      changeRouter(window.location.hash);
     }
- }
-
+  }
 }
 
 

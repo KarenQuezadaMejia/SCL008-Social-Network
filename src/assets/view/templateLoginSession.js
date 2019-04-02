@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Manejo del DOM
 /*
 2.Crear la plantilla estructural del html que representa al login.
@@ -14,15 +15,43 @@ export const templateLoginSession =() =>{
                                 <input id="password" class="password" type="password" placeholder="Ingresa tu contraseña">
                                 <button id="sign-in" class="login-btn" type="button">INICIAR SESIÓN</button>
                                 </form>`   //contenido del login
+=======
+/*  En este archivo creamos todas las funciones referentes a la autentificación del usuario */
 
+//Función para iniciar sesión con gmail
+export const  loginGmail=()=> {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        let token = result.credential.accessToken;
+        // The signed-in user info.
+        let user = result.user;
+        // ...
+      }).catch(function(error) {
+        // Handle Errors here.
+        let errorCode = error.code;
+        let errorMessage = error.message;
+        // The email of the user's account used.
+        let email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        let credential = error.credential;
+        // ...
+      }); 
+>>>>>>> 33cde55eff302e12671f824abb9392d71dc579e0
 
-//pasar el contenido al div
-containerLoginSession.innerHTML = contentLoginSession;
-
-const btn = containerLoginSession.querySelector('#loginSession');  //querySelector busca donde yo le indique, puede buscar en hijos
-btn.addEventListener('click',()=>{
-    console.log(loginSession);
-})
-
-return containerLoginSession;
 }
+
+//Función para registro de nuevo usuario
+export const newAccount = (email, password)=>{
+    let newEmail = document.getElementById('newuser-email').value;
+    let newPassword = document.getElementById('newuser-password').value;
+    console.log(email);
+    console.log(password);
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+    .catch(function(error) {
+    // Handle Errors here.
+        let errorCode =alert (error.code);
+        let errorMessage = alert(error.message);
+    // ...
+  });
+Contraer

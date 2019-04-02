@@ -1,4 +1,3 @@
-
 /*
 2. Crear plantilla estructural de html que representa al login.
 Tenemos que importar la función que creamos en el auth.j(createAccount)
