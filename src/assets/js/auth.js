@@ -35,3 +35,8 @@ export const newAccount = (email, password)=>{
         let errorMessage = alert(error.message);
     // ...
   });
+
+}
+
+
+//Función para iniciar sesión, usuario ya registrado
