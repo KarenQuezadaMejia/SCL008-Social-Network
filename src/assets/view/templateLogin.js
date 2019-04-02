@@ -15,8 +15,10 @@ export const templateLoginGmail =() =>{
 
     const btn = containerLogin.querySelector('#google-login');  //querySelector busca donde yo le indique, puede buscar en hijos
     btn.addEventListener('click',()=>{
-    console.log(loginGoogle);
+    loginGmail();
 })
 
 return containerLogin;
 }
+
+

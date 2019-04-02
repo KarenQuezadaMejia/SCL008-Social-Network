@@ -1,12 +1,12 @@
 
 import {templateLoginGmail} from './assets/view/templateLogin.js';
 import {templateCreate} from './assets/view/templateCreate.js';
-/*
-  crear una función que reciba el hash (#) y según el match retorne otra función que va a imprimir el template en el html
-*/
+import {templateLoginSession} from './assets/view/templateLoginSession.js';
+
+//  crear una función que reciba el hash (#) y según el match retorne otra función que va a imprimir el template en el html
 
 const changeRouter = (hash) => {
-  if (hash === '#/login') {
+  if (hash === '#/loginGmail') {
     return showTemplate(hash);
   }
     if(hash==='#/loginSession'){
@@ -23,7 +23,7 @@ const changeRouter = (hash) => {
 //Imprimirá el template en el html
 const showTemplate =(hash)=>{
     const router = hash.substring(2);
-    let containerRoot=document.getElementById('login');
+    let containerRoot=document.getElementById('root');
     containerRoot.innerHTML="";
     //hacemos el match del hash utilizado y el template que quiero mostrar
 
@@ -44,6 +44,8 @@ const showTemplate =(hash)=>{
 
 export const initRouter = () => {
   window.addEventListener('load', changeRouter(window.location.hash));
+  let containerRoot=document.getElementById('root');
+  containerRoot.appendChild(templateLoginSession());
 
   // reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter
   if ('onhashchange' in window) {
