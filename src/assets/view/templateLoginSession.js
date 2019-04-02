@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+//Manejo del DOM
+/*
+2.Crear la plantilla estructural del html que representa al login.
+Tenemos importar la función que creamos en en auth.js
+*/
+//. entrar a una carpeta, .. retroceder en una carpeta
+
+import {loginSession} from '../js/auth.js';
+//porque el archivo runInContext.js luego lo va a TransformStream
+export const templateLoginSession =() =>{
+    const containerLoginSession=document.createElement('div')          //esta despues se le pasa al html
+    const contentLoginSession= `<form>
+                                <input id="email" class="email" type="email" placeholder="Ingresa tu correo">
+                                <input id="password" class="password" type="password" placeholder="Ingresa tu contraseña">
+                                <button id="sign-in" class="login-btn" type="button">INICIAR SESIÓN</button>
+                                </form>`   //contenido del login
+=======
 /*  En este archivo creamos todas las funciones referentes a la autentificación del usuario */
 
 //Función para iniciar sesión con gmail
@@ -19,6 +37,7 @@ export const  loginGmail=()=> {
         let credential = error.credential;
         // ...
       }); 
+>>>>>>> 33cde55eff302e12671f824abb9392d71dc579e0
 
 }
 

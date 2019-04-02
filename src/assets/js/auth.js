@@ -20,7 +20,7 @@ export const  loginGmail=()=> {
         // ...
       }); 
 
-}
+
 
 //Función para registro de nuevo usuario
 export const newAccount = (email, password)=>{
@@ -35,3 +35,8 @@ export const newAccount = (email, password)=>{
         let errorMessage = alert(error.message);
     // ...
   });
+
+}
+
+
+//Función para iniciar sesión, usuario ya registrado
