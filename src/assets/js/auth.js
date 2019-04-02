@@ -1,5 +1,16 @@
 /*  En este archivo creamos todas las funciones referentes a la autentificación del usuario */
 
+//Función para iniciar sesión, usuario ya registrado
+export const loginSession=(userEmail,userPassword)=>{
+    firebase.auth().signInWithEmailAndPassword(userEmail, userPassword)
+    .catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+      });
+    }
+
 //Función para iniciar sesión con gmail
 export const  loginGmail=()=> {
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -19,6 +30,8 @@ export const  loginGmail=()=> {
         let credential = error.credential;
         // ...
       }); 
+      return 'login con Google';
+    }
 
 
 
@@ -39,4 +52,3 @@ export const newAccount = (email, password)=>{
 }
 
 
-//Función para iniciar sesión, usuario ya registrado
