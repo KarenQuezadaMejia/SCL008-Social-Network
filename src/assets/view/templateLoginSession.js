@@ -9,16 +9,23 @@ import {loginSession} from '../js/auth.js';
 
 export const templateLoginSession =() =>{
    const containerLoginSession=document.createElement('div')
-   const contentLoginSession= `<element id="signin-container" class="signin-container">
-                                <img src="./assets/img/logoSN.png" alt="logo" class="logo-img">
-                                   <element id="sign-in-box" class="container-login">
+   const contentLoginSession= `<element id='signin-container' class='signin-container'>
+                                  <img src='./assets/img/logoSN.png' alt='logo' class='logo-img'>
+                                  <element id='sign-in-box' class='container-login'>
                                      <form>
-                                       <input id="email-user" class="email" type="email" placeholder="Ingresa tu correo">
-                                       <input id="password-user" class="password" type="password" placeholder="Ingresa tu contraseña">
-                                        <button id="sign-in" class="login-btn" type="button">INICIAR SESIÓN</button>
+                                       <input id='email-user' class='email' type='email' placeholder='Ingresa tu correo'>
+                                       <input id='password-user'class='password' type='password' placeholder='Ingresa tu contraseña'>
+                                        <button id='sign-in' class='login-btn' type='button'>INICIAR SESIÓN</button>
                                      </form>
-                                   </element>
-                                </element>`
+                                  </element>
+                                  <element id='sign-in-boxgmail' class='container-gmail'>
+                                  <h4>Ingresa directamente con:</h4>
+                                  <button id='sig-in-gmail' class='fab fa-google' type='button'></button>
+                                  </element>
+                                  <element id='new-sig-in' class='container-new-user'>
+                                  <h4>Si no tienes cuenta, registrate aquí</h4>
+                                  </element>
+                               </element>`
                                  
     containerLoginSession.innerHTML = contentLoginSession;
     const btn = containerLoginSession.querySelector('#sign-in');  //querySelector busca donde yo le indique, puede buscar en hijos
