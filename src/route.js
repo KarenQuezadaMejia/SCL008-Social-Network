@@ -1,5 +1,5 @@
 
-import {templateLogin} from './assets/view/templateLogin.js';
+import {templateLoginGmail} from './assets/view/templateLogin.js';
 import {templateCreate} from './assets/view/templateCreate.js';
 
 /*Crear una función que reciba el hash (#) y según el match o la coincidencia
@@ -7,6 +7,9 @@ retorne otra función que va a imprimir el template en el html*/
 
 const changeRouter=(hash)=>{
     if(hash=== '#/login'){
+        return showTemplate(hash);
+    }
+    if(hash==='#/loginSession'){
         return showTemplate(hash);
     }
     if(hash==='#/create'){
@@ -18,7 +21,7 @@ const changeRouter=(hash)=>{
 //Imprimirá el template en el html
 const showTemplate =(hash)=>{
     const router = hash.substring(2);
-    let containerRoot=document.getElementById('root');
+    let containerRoot=document.getElementById('login');
     containerRoot.innerHTML="";
     //hacemos el match del hash utilizado y el template que quiero mostrar
 

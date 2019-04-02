@@ -6,12 +6,14 @@ Tenemos que importar la función que creamos en el auth.j(createAccount)
 
 
 
-import{createAccount} from '../js/auth.js';
+import{newAccount} from '../js/auth.js';
 
 export const templateCreate =() =>{
     const containerCreate=document.createElement('div')          //esta despues se le pasa al html
-    const contentCreate= `<p>Si no tienes cuenta regístrate aquí </p>`   //contenido del login
-
+    const contentCreate= `<h2>Si no tienes cuenta regístrate aquí</h2>
+                          <input type="email" placeholder="Ingresa tu email" id="newuser-email">
+                          <input type="password" placeholder="Ingresa tu contraseña" id="newuser-password">
+                          <button id="create">crear cuenta</button>`  
 
 //pasar el contenido al div
 containerCreate.innerHTML = contentCreate;
