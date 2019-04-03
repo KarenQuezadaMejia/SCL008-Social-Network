@@ -8,7 +8,10 @@ export const signInSession=(userEmail,userPassword)=>{
         var errorCode = error.code;
         var errorMessage = error.message;
         // ...
+        
       });
+     console.log(userEmail);
+     console.log(userPassword);
     }
 
 //Función para iniciar sesión con gmail

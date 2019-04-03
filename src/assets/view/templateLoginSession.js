@@ -8,7 +8,9 @@ Tenemos importar la función que creamos en en auth.js
 import {
   signInGmail,
   signInSession,
-  signUp} from '../js/auth.js';
+  } from '../js/auth.js';
+import { templateCreate } from './templateCreate.js';
+
 
 export const templateLoginSession =() =>{
    const containerLoginSession=document.createElement('div')
@@ -31,6 +33,7 @@ export const templateLoginSession =() =>{
                                </element>`
                                  
     containerLoginSession.innerHTML = contentLoginSession;
+    //Botón de inicio de sesión que conecta con el container y con la función en auth
     const btn = containerLoginSession.querySelector('#sign-in');  //querySelector busca donde yo le indique, puede buscar en hijos
      btn.addEventListener('click',()=>{
       let email=containerLoginSession.querySelector('#email-user').value;
@@ -38,12 +41,15 @@ export const templateLoginSession =() =>{
     signInSession(email,password);
 });
 
+//Botón de gmail que conecta con el container y con la función en auth
 const btnGmail = containerLoginSession.querySelector('#sign-in-gmail');
 btnGmail.addEventListener('click',signInGmail);
 
 const btnRegister = containerLoginSession.querySelector('#new-user-registration');
   btnRegister.addEventListener('click', () => {
-   changeHash('#/registration');
+    console.log('click')
+    templateCreate();
+   //llamar al template create para mostrarse;
   });
 
 return containerLoginSession;

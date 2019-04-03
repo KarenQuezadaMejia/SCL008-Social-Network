@@ -1,6 +1,6 @@
 /*
 2. Crear plantilla estructural de html que representa al login.
-Tenemos que importar la función que creamos en el auth.j(createAccount)
+Tenemos que importar la función que creamos, en el auth.j(createAccount)
 */
 
 
@@ -8,6 +8,11 @@ Tenemos que importar la función que creamos en el auth.j(createAccount)
 import{signUp} from '../js/auth.js';
 
 export const templateCreate =() =>{
+<<<<<<< HEAD
+  
+=======
+
+>>>>>>> 0603e10d29c17e63540dd590475a6304b38efb17
     const registrationContainer = document.createElement('div');
     const registrationTemplate = `<div class="signup-container" id="sign-up-box">
                                     <form>
@@ -21,15 +26,17 @@ export const templateCreate =() =>{
                                    </div>`;
 
  registrationContainer.innerHTML = registrationTemplate;
- const btnRegister = containerRegistration.querySelector('#sign-up');
+
+ const btnRegister = registrationContainer.querySelector('#sign-up');
  btnRegister.addEventListener('click', () => { 
-    let name=containerLoginSession.querySelector('#user-name').value;
-    let lastname=containerLoginSession.querySelector('#user-lastname').value;
-    let email=containerLoginSession.querySelector('#email').value;
-    let password=containerLoginSession.querySelector('#password').value;
+    let name=registrationContainer.querySelector('#user-name').value;
+    let lastname=registrationContainer.querySelector('#user-lastname').value;
+    let email=registrationContainer.querySelector('#email').value;
+    let password=registrationContainer.querySelector('#password').value;
   signUp(email,password);
  });
- return registrationTemplate;
+ 
+ return registrationContainer;
  };
  
 
