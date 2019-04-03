@@ -28,7 +28,7 @@ export const templateLoginSession =() =>{
                                   <button id='sign-in-gmail' class='fab fa-google' type='button'></button>
                                   </element>
                                   <element  class='container-new-user'>
-                                  <h4 id='new-user-registration'>Si no tienes cuenta, registrate aquí</h4>
+                                  <h4 id='new-user-registration'>Si no tienes cuenta, registrate <a href='#/create'>aquí</a></h4>
                                   </element>
                                </element>`
                                  
