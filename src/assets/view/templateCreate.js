@@ -8,7 +8,6 @@ Tenemos que importar la función que creamos en el auth.j(createAccount)
 import{signUp} from '../js/auth.js';
 
 export const templateCreate =() =>{
-  
     const registrationContainer = document.createElement('div');
     const registrationTemplate = `<div class="signup-container" id="sign-up-box">
                                     <form>
