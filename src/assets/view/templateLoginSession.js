@@ -26,7 +26,7 @@ export const templateLoginSession =() =>{
                                   <button id='sign-in-gmail' class='fab fa-google' type='button'></button>
                                   </element>
                                   <element  class='container-new-user'>
-                                  <h4 id='new-user-registration'>Si no tienes cuenta, registrate aquí</h4>
+                                  <a href='#/create' id='new-user-registration'>Si no tienes cuenta, registrate aquí</a>
                                   </element>
                                </element>`
                                  
@@ -43,7 +43,7 @@ btnGmail.addEventListener('click',signInGmail);
 
 const btnRegister = containerLoginSession.querySelector('#new-user-registration');
   btnRegister.addEventListener('click', () => {
-   changeHash('#/registration');
+   //changeHash('#/registration');
   });
 
 return containerLoginSession;
