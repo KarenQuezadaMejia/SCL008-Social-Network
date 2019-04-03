@@ -8,7 +8,7 @@ Tenemos que importar la función que creamos en el auth.j(createAccount)
 import{signUp} from '../js/auth.js';
 
 export const templateCreate =() =>{
-    const registrationContainer = document.createElement('div class ="root"');
+    const registrationContainer = document.createElement('div');
     const registrationTemplate = `<div class="signup-container" id="sign-up-box">
                                     <form>
                                     <h2>Regístrate</h2>  
@@ -21,12 +21,12 @@ export const templateCreate =() =>{
                                    </div>`;
 
  registrationContainer.innerHTML = registrationTemplate;
- const btnRegister = containerRegistration.querySelector('#sign-up');
+ const btnRegister = registrationContainer.querySelector('#sign-up');
  btnRegister.addEventListener('click', () => { 
-    let name=containerLoginSession.querySelector('#user-name').value;
-    let lastname=containerLoginSession.querySelector('#user-lastname').value;
-    let email=containerLoginSession.querySelector('#email').value;
-    let password=containerLoginSession.querySelector('#password').value;
+    let name=registrationContainer.querySelector('#user-name').value;
+    let lastname=registrationContainer.querySelector('#user-lastname').value;
+    let email=registrationContainer.querySelector('#email').value;
+    let password=registrationContainer.querySelector('#password').value;
   signUp(email,password);
  });
  return registrationTemplate;

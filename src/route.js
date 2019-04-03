@@ -1,15 +1,14 @@
 
-import {templateLoginGmail} from './assets/view/templateLogin.js';
 import {templateCreate} from './assets/view/templateCreate.js';
 import {templateLoginSession} from './assets/view/templateLoginSession.js';
 
 //  crear una función que reciba el hash (#) y según el match retorne otra función que va a imprimir el template en el html
 
 const changeRouter = (hash) => {
-  if (hash === '#/loginGmail') {
+  if (hash === '#/sign-in') {
     return showTemplate(hash);
   }
-    if(hash==='#/loginSession'){
+    if(hash==='#/new-user-registration'){
         return showTemplate(hash);
     }
     if(hash==='#/create'){
