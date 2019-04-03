@@ -11,7 +11,8 @@ export const templateCreate =() =>{
   
     const registrationContainer = document.createElement('div');
     const registrationTemplate = `<div class="signup-container" id="sign-up-box">
-                                    <form>
+    								<img src='./assets/img/logoSN.png' alt='logo' class='logo-img'>
+                                    <form class="create">
                                     <h2>Regístrate</h2>  
                                     <input id="user-name" class="user-name" type="text" placeholder="Nombre">
                                     <input id="user-lastname" class="user-lastname" type="text" placeholder="Apellido">
