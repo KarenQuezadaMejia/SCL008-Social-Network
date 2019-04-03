@@ -1,7 +1,7 @@
 /*  En este archivo creamos todas las funciones referentes a la autentificación del usuario */
 
 //Función para iniciar sesión, usuario ya registrado
-export const loginSession=(userEmail,userPassword)=>{
+export const signInSession=(userEmail,userPassword)=>{
     firebase.auth().signInWithEmailAndPassword(userEmail, userPassword)
     .catch(function(error) {
         // Handle Errors here.
@@ -12,7 +12,7 @@ export const loginSession=(userEmail,userPassword)=>{
     }
 
 //Función para iniciar sesión con gmail
-export const  loginGmail=()=> {
+export const  signInGmail=()=> {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider).then(function(result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
@@ -36,11 +36,7 @@ export const  loginGmail=()=> {
 
 
 //Función para registro de nuevo usuario
-export const newAccount = (email, password)=>{
-    let newEmail = document.getElementById('newuser-email').value;
-    let newPassword = document.getElementById('newuser-password').value;
-    console.log(email);
-    console.log(password);
+export const signUp = (email, password)=>{
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .catch(function(error) {
     // Handle Errors here.
