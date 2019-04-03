@@ -1,6 +1,33 @@
 body{
-	background-color: #EFFBEF;
+	background-color: #CCCCFF;
+	font-family: 'Merriweather', serif;
+	font-size: 20px;
+	margin: auto;
 }
+
+@media (max-width: 800px){
+	body{
+		font-size: 35px;
+	}
+
+  .logo-img {
+    width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .email{
+	margin-bottom: 10px;
+	font-size: 20px;
+
+}
+
+.password{
+	margin-bottom: 15px;
+	font-size: 20px;
+}
+}
+
 
 @media (min-width: 320px) {
 	.root{
@@ -14,13 +41,51 @@ body{
 
   .logo-img {
     width: 300px;
-    position: absolute;
     text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
   }
 
-  .container-login{
-  	position: absolute;
-  	margin-top: 400px;
+  .signup-container{
+  	text-align: center;
   }
+
+
+.create{
+	text-align: center;
+	width: 200px;
+	margin: auto;
+	
+}
+
+
+.email{
+	margin-bottom: 10px;
+	font-size: 20px;
+
+}
+
+.password{
+	margin-bottom: 15px;
+	font-size: 20px;
+}
+
+button{
+	border-radius: 15px;
+	background-color: #9999CC;
+	height: 40px;
+	width: 150px;
+	font-size: 16px; 
+
+}
+
+button:hover{
+	background-color: #2E64FE;
+}
+
+.fa, .fab, .fal, .far, .fas {
+	color: red;
+}
+
 }
 
