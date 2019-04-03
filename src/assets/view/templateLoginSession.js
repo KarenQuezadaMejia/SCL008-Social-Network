@@ -5,7 +5,10 @@ Tenemos importar la función que creamos en en auth.js
 */
 //. entrar a una carpeta, .. retroceder en una carpeta
 
-import {loginSession} from '../js/auth.js';
+import {
+  signInGmail,
+  signInSession,
+  signUp} from '../js/auth.js';
 
 export const templateLoginSession =() =>{
    const containerLoginSession=document.createElement('div')
@@ -20,23 +23,31 @@ export const templateLoginSession =() =>{
                                   </element>
                                   <element id='sign-in-boxgmail' class='container-gmail'>
                                   <h4>Ingresa directamente con:</h4>
-                                  <button id='sig-in-gmail' class='fab fa-google' type='button'></button>
+                                  <button id='sign-in-gmail' class='fab fa-google' type='button'></button>
                                   </element>
-                                  <element id='new-sig-in' class='container-new-user'>
-                                  <h4>Si no tienes cuenta, registrate aquí</h4>
+                                  <element  class='container-new-user'>
+                                  <h4 id='new-user-registration'>Si no tienes cuenta, registrate aquí</h4>
                                   </element>
                                </element>`
                                  
     containerLoginSession.innerHTML = contentLoginSession;
     const btn = containerLoginSession.querySelector('#sign-in');  //querySelector busca donde yo le indique, puede buscar en hijos
-    btn.addEventListener('click',()=>{
+     btn.addEventListener('click',()=>{
       let email=containerLoginSession.querySelector('#email-user').value;
       let password=containerLoginSession.querySelector('#password-user').value;
-    loginSession(email,password);
-})
+    signInSession(email,password);
+});
+
+const btnGmail = containerLoginSession.querySelector('#sign-in-gmail');
+btnGmail.addEventListener('click',signInGmail);
+
+const btnRegister = containerLoginSession.querySelector('#new-user-registration');
+  btnRegister.addEventListener('click', () => {
+   changeHash('#/registration');
+  });
 
 return containerLoginSession;
-}
+};
 
 
 
