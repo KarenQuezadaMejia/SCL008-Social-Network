@@ -58,7 +58,6 @@ body{
 	
 }
 
-
 .email{
 	margin-bottom: 10px;
 	font-size: 20px;
@@ -66,6 +65,16 @@ body{
 }
 
 .password{
+	margin-bottom: 15px;
+	font-size: 20px;
+}
+
+.user-name{
+	margin-bottom: 15px;
+	font-size: 20px;
+}
+
+.user-lastname{
 	margin-bottom: 15px;
 	font-size: 20px;
 }
