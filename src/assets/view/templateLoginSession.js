@@ -47,6 +47,7 @@ btnGmail.addEventListener('click',signInGmail);
 
 const btnRegister = containerLoginSession.querySelector('#new-user-registration');
   btnRegister.addEventListener('click', () => {
+    console.log('click')
     templateCreate();
    //llamar al template create para mostrarse;
   });

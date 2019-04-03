@@ -27,8 +27,11 @@ const showTemplate =(hash)=>{
     //hacemos el match del hash utilizado y el template que quiero mostrar
 
     switch(router){
-        case 'login':
+        case 'sign-in':
         containerRoot.appendChild(templateLogin());
+        break;
+        case 'new-user-registration':
+        containerRoot.appendChild(templateCreate());
         break;
         case 'create':
         containerRoot.appendChild(templateCreate());
