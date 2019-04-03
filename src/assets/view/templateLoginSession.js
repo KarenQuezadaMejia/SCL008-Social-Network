@@ -48,8 +48,3 @@ const btnRegister = containerLoginSession.querySelector('#new-user-registration'
 
 return containerLoginSession;
 };
-
-
-
-                                
-        
