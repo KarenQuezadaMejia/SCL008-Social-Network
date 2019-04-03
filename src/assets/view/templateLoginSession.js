@@ -15,7 +15,7 @@ export const templateLoginSession =() =>{
    const contentLoginSession= `<element id='signin-container' class='signin-container'>
                                   <img src='./assets/img/logoSN.png' alt='logo' class='logo-img'>
                                   <element id='sign-in-box' class='container-login'>
-                                     <form>
+                                     <form class="create">
                                        <input id='email-user' class='email' type='email' placeholder='Ingresa tu correo'>
                                        <input id='password-user'class='password' type='password' placeholder='Ingresa tu contraseña'>
                                         <button id='sign-in' class='login-btn' type='button'>INICIAR SESIÓN</button>
