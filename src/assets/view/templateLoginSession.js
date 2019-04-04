@@ -1,4 +1,7 @@
 //Manejo del DOM
+//import es para traerme las cosas, yo te uso 
+//window importa y exporta al mismo tiempo
+//export, yo quiero que me usen
 /*
 2.Crear la plantilla estructural del html que representa al login.
 Tenemos importar la función que creamos en en auth.js

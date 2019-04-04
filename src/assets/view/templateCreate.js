@@ -30,7 +30,9 @@ export const templateCreate =() =>{
     let lastname=registrationContainer.querySelector('#user-lastname').value;
     let email=registrationContainer.querySelector('#email').value;
     let password=registrationContainer.querySelector('#password').value;
-  signUp(email,password);
+    
+    signUp(email,password);
+  
  });
  
  return registrationContainer;
