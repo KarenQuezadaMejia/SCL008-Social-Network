@@ -44,14 +44,16 @@ export const  signInGmail=()=> {
 
 //Función para registro de nuevo usuario
 export const newUser = (name, lastname, email, password, confirmPassword) => {
+    console.log(checkNewUser())
     if (checkNewUser (name, lastname, email, password, confirmPassword)){
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(function(){
+            var db = firebase.firestore();
             db.collection("users").add({
-            name: user-name,
-            lastname: user-lastname,
-            email: email,
-            password: password,
+             first: name,
+             last: lastname,
+             email: email,
+             password: password,
 
         })
             .then(function(docRef) {

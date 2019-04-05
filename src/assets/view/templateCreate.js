@@ -45,42 +45,42 @@ export const templateCreate =() =>{
  if(name ===""){
  	document.getElementById('alert-name').innerHTML = 'Debes ingresar tu nombre'
  } else{
- 	documentGetElementById('alert-name').innerHTML = ''
+ 	document.getElementById('alert-name').innerHTML = ''
  }
 
  if(lastname ===""){
-  document.getElementById('alert-lastname').innerHTML = 'Debes ingresar tu apellido'
+ 	document.getElementById('alert-lastname').innerHTML = 'Debes ingresar tu apellido'
  } else{
- 	documentGetElementById('alert-lastname').innerHTML = ''
+ 	document.getElementById('alert-lastname').innerHTML = ''
  }
 
  if(email ===""){
- 	documentGetElementById('alert-email').innerHTML = 'Debes ingresar tu correo'
+ 	document.getElementById('alert-email').innerHTML = 'Debes ingresar tu correo'
  } else{
- 	documentGetElementById('alert-email').innerHTML = ''
+ 	document.getElementById('alert-email').innerHTML = ''
  }
 
  if(password ===""){
- 	documentGetElementById('alert-password').innerHTML = 'Debes ingresar una contraseña con un mínimo de 6 caracteres'
+ 	document.getElementById('alert-password').innerHTML = 'Debes ingresar una contraseña con un mínimo de 6 caracteres'
  } else{
- 	documentGetElementById('alert-password').innerHTML = ''
+ 	document.getElementById('alert-password').innerHTML = ''
  }
 
  if(confirmPassword ===""){
- 	documentGetElementById('alert-confirmpass').innerHTML = 'Debes confirmar tu contraseña'
+ 	document.getElementById('alert-confirmpass').innerHTML = 'Debes confirmar tu contraseña'
  } else{
- 	documentGetElementById('alert-confirmpass').innerHTML = ''
+ 	document.getElementById('alert-confirmpass').innerHTML = ''
  }
 
  if(confirmPassword !== password){
- 	documentGetElementById('alert-confirmpass').innerHTML = 'Tus contraseñas deben de ser iguales'
+ 	document.getElementById('alert-confirmpass').innerHTML = 'Tus contraseñas deben de ser iguales'
  } else{
- 	documentGetElementById('alert-confirmpass').innerHTML = ''
+ 	document.getElementById('alert-confirmpass').innerHTML = ''
  }
- if (createNewAccount== true) {
+/* if (createNewAccount== true) {
  } else {
  	console.log(createNewAccount);
-}
+}*/
 })
 
  return registrationContainer;
