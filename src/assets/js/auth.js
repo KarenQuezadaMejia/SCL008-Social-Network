@@ -1,6 +1,10 @@
 /*  En este archivo creamos todas las funciones referentes a la autentificación del usuario */
 
+import {checkNewUser} from '../js/validation.js'
+
+
 //Función para iniciar sesión, usuario ya registrado
+
 export const signInSession=(userEmail,userPassword)=>{
     firebase.auth().signInWithEmailAndPassword(userEmail, userPassword)
     .catch(function(error) {
@@ -39,6 +43,14 @@ export const  signInGmail=()=> {
 
 
 //Función para registro de nuevo usuario
+export newUser = (name, lastname, email, password, confirmPassword) => {
+    If (checkNewUser (name, lastname, email, password, confirmPassword)){
+        
+    }
+
+}
+
+
 export const signUp = (email, password)=>{
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .catch(function(error) {
@@ -51,3 +63,15 @@ export const signUp = (email, password)=>{
 }
 
 
+/*db.collection("users").add({
+    first: "Ada",
+    last: "Lovelace",
+    born: 1815
+})
+.then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+})
+.catch(function(error) {
+    console.error("Error adding document: ", error);
+});
+*/
