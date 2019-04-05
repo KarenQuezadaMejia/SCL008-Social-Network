@@ -1,23 +1,32 @@
-import { loginGoogle } from "../src/assets/js/auth";
-
+//import { loginGoogle } from "../src/assets/js/auth";
+//import { AssertionError } from "assert";
+import { checkNewUser } from './../src/assets/js/validation.js';
 //Función para iniciar sesión con google
 
-describe('loginGoogle', ()=>{
-    it('debería ser una función',()=>{
-        
+describe('checkNewUser', () => {
+
+    it('', () => {
+        expect(checkNewUser()).toBe(false);
     });
 
-    it('debería iniciar sesión con la cuenta gmail y la contraseña proporcionada',()=>{
-
+    it('', () => {
+        expect(checkNewUser()).toBe(false);
     });
 
-    it('debería arrojar error si la cuenta gmail o la contraseña proporcionada no es válida',()=>{
+describe('confirmPassword', () => {
 
+        it('confirmPassword===password', () => {
+            expect(confirmPassword(123456, 123456)).toBe(true);
+        });
+    
+        it('confirmPassword !== password', () => {
+            expect(confirmPassword(123456, 12345678)).toEqual(false);
+        });
+    
     });
-
-    it('debería guardar los datos nombre y apellido que se tiene registrada en la cuenta gmail',()=>{
-
-    });
-})
+});
 
 
+   
+
+ 

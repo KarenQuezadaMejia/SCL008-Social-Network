@@ -1,9 +1,16 @@
 
 
-export checkNewUser = (name, lastname, email, password, confirmPassword) => {
-	If (name === "" || lastname === "" || email === "" || password === "" || confirmPassword === ""){
+export const checkNewUser = (name, lastname, email, password, confirmPassword) => {
+	if (name === "" || lastname === "" || email === "" || password === "" || confirmPassword === ""){
 		return false
 	} else {
 		return true
 	}
 }
+export const checkEmail =(email) =>{
+let 	
+}
+
+
+
+export const 
