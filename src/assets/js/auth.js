@@ -44,24 +44,31 @@ export const  signInGmail=()=> {
 
 //Función para registro de nuevo usuario
 export const newUser = (name, lastname, email, password, confirmPassword) => {
-      if (checkNewUser (name, lastname, email, password, confirmPassword)){
-        
+    if (checkNewUser (name, lastname, email, password, confirmPassword)){
         firebase.auth().createUserWithEmailAndPassword(email, password)
-         .then(function(){
-           db.collection("users").add({
-           name: user-name,
-           lastname: user-lastname,
-           email: email,
-           password:password
-           })
-         .then(function(docRef) {
-          console.log("Document written with ID: ", docRef.id);
-          })
-         .catch(function(error) {
-          console.error("Error adding document: ", error);
-          });
-        }
+        .then(function(){
+            db.collection("users").add({
+            name: user-name,
+            lastname: user-lastname,
+            email: email,
+            password: password,
+
+        })
+            .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+        })
+
+        
+        .catch(function(error) {
+            // Handle Errors here.
+            let errorCode =alert (error.code);
+            let errorMessage = alert(error.message);
+            // ...
+        }); 
     }
-}
-
-
+} 
