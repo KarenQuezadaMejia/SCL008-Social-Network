@@ -5,7 +5,7 @@ Tenemos que importar la función que creamos, en el auth.j(createAccount)
 
 
 
-import{newUser} from '../js/auth.js';
+import{checkNewUser} from '../js/validation.js';
 
 export const templateCreate =() =>{
   
@@ -38,45 +38,46 @@ export const templateCreate =() =>{
     let password=registrationContainer.querySelector('#password').value;
     let confirmPassword=registrationContainer.querySelector('#confirm-password').value;
     //esta variable llama a una función que se encuentra en auth para después conectarla con firebase
-    let createNewAccount = newUser(name, lastname, email, password, confirmPassword);
+    let createNewAccount = checkNewUser(name, lastname, email, password, confirmPassword);
   //signUp(email,password);
  
 
  if(name ===""){
- 	documentGetElementById('alert-name').innerHTML = 'Debes ingresar tu nombre'
+ 	document.getElementById('alert-name').innerHTML = 'Debes ingresar tu nombre'
  } else{
- 	documentGetElementById('alert-name').innerHTML = ''
+ 	document.getElementById('alert-name').innerHTML = ''
  }
 
  if(lastname ===""){
- 	documentGetElementById('alert-lastname').innerHTML = 'Debes ingresar tu apellido'
+ 	document.getElementById('alert-lastname').innerHTML = 'Debes ingresar tu apellido'
  } else{
- 	documentGetElementById('alert-lastname').innerHTML = ''
+ 	document.getElementById('alert-lastname').innerHTML = ''
  }
 
  if(email ===""){
- 	documentGetElementById('alert-email').innerHTML = 'Debes ingresar tu correo'
+ 	document.getElementById('alert-email').innerHTML = 'Debes ingresar tu correo'
  } else{
- 	documentGetElementById('alert-email').innerHTML = ''
+ 	document.getElementById('alert-email').innerHTML = ''
  }
 
  if(password ===""){
- 	documentGetElementById('alert-password').innerHTML = 'Debes ingresar una contraseña con un mínimo de 6 caracteres'
+ 	document.getElementById('alert-password').innerHTML = 'Debes ingresar una contraseña con un mínimo de 6 caracteres'
  } else{
- 	documentGetElementById('alert-password').innerHTML = ''
+ 	document.getElementById('alert-password').innerHTML = ''
  }
 
  if(confirmPassword ===""){
- 	documentGetElementById('alert-confirmpass').innerHTML = 'Debes confirmar tu contraseña'
+ 	document.getElementById('alert-confirmpass').innerHTML = 'Debes confirmar tu contraseña'
  } else{
- 	documentGetElementById('alert-confirmpass').innerHTML = ''
+ 	document.getElementById('alert-confirmpass').innerHTML = ''
  }
 
  if(confirmPassword !== password){
- 	documentGetElementById('alert-confirmpass').innerHTML = 'Tus contraseñas deben de ser iguales'
+ 	document.getElementById('alert-confirmpass').innerHTML = 'Tus contraseñas deben de ser iguales'
  } else{
- 	documentGetElementById('alert-confirmpass').innerHTML = ''
+ 	document.getElementById('alert-confirmpass').innerHTML = ''
  }
+
  if (createNewAccount== true) {
  } else {
  	console.log(createNewAccount);
