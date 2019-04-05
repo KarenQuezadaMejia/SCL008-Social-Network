@@ -43,35 +43,43 @@ export const  signInGmail=()=> {
 
 
 //Función para registro de nuevo usuario
-export newUser = (name, lastname, email, password, confirmPassword) => {
-    If (checkNewUser (name, lastname, email, password, confirmPassword)){
+export const newUser = (name, lastname, email, password, confirmPassword) => {
+    console.log(checkNewUser())
+    if (checkNewUser (name, lastname, email, password, confirmPassword)){
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then(function(){
+            var db = firebase.firestore();
+            db.collection("users").add({
+             first: name,
+             last: lastname,
+             email: email,
+             password: password,
+
+        })
+            .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+        })
         
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+        })
+
+        
+        .catch(function(error) {
+            // Handle Errors here.
+            let errorCode =alert (error.code);
+            let errorMessage = alert(error.message);
+            // ...
+        }); 
     }
-
-}
-
-
-export const signUp = (email, password)=>{
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-    .catch(function(error) {
-    // Handle Errors here.
-        let errorCode =alert (error.code);
-        let errorMessage = alert(error.message);
-    // ...
-  });
-
-}
+} 
 
 
-/*db.collection("users").add({
-    first: "Ada",
-    last: "Lovelace",
-    born: 1815
-})
-.then(function(docRef) {
-    console.log("Document written with ID: ", docRef.id);
-})
-.catch(function(error) {
-    console.error("Error adding document: ", error);
-});
-*/
+
+
+
+
+
+
+

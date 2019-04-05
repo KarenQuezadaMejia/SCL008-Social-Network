@@ -8,9 +8,9 @@ export const checkNewUser = (name, lastname, email, password, confirmPassword) =
 	}
 }
 export const checkEmail =(email) =>{
-let 	
+let email2= 	
 }
 
 
 
-export const 
+export con

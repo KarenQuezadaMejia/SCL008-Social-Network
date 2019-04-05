@@ -24,7 +24,7 @@ export const templateCreate =() =>{
                                      <p id="alert-password"></p>
                                     <input id="confirm-password" class="password" type="password" placeholder="Confirma tu contraseña">
                                      <p id="alert-confirmpass"></p>
-                                    <button id="sign-up" class="sign-up-btn" type="button">Crear Cuenta</button>
+                                    <button id='sign-up' class="sign-up-btn" type="button">Crear Cuenta</button>
                                     </form>
                                    </div>`;
 
@@ -43,28 +43,44 @@ export const templateCreate =() =>{
  
 
  if(name ===""){
- 	documentGetElementById('alert-name').innerHTML = 'Debes ingresar tu nombre'
+ 	document.getElementById('alert-name').innerHTML = 'Debes ingresar tu nombre'
+ } else{
+ 	document.getElementById('alert-name').innerHTML = ''
  }
 
  if(lastname ===""){
- 	documentGetElementById('alert-lastname').innerHTML = 'Debes ingresar tu apellido'
+ 	document.getElementById('alert-lastname').innerHTML = 'Debes ingresar tu apellido'
+ } else{
+ 	document.getElementById('alert-lastname').innerHTML = ''
  }
 
  if(email ===""){
- 	documentGetElementById('alert-email').innerHTML = 'Debes ingresar tu correo'
+ 	document.getElementById('alert-email').innerHTML = 'Debes ingresar tu correo'
+ } else{
+ 	document.getElementById('alert-email').innerHTML = ''
  }
 
  if(password ===""){
- 	documentGetElementById('alert-password').innerHTML = 'Debes ingresar una contraseña con un mínimo de 6 caracteres'
+ 	document.getElementById('alert-password').innerHTML = 'Debes ingresar una contraseña con un mínimo de 6 caracteres'
+ } else{
+ 	document.getElementById('alert-password').innerHTML = ''
  }
 
  if(confirmPassword ===""){
- 	documentGetElementById('alert-confirmpass').innerHTML = 'Debes confirmar tu contraseña'
- } 
+ 	document.getElementById('alert-confirmpass').innerHTML = 'Debes confirmar tu contraseña'
+ } else{
+ 	document.getElementById('alert-confirmpass').innerHTML = ''
+ }
 
  if(confirmPassword !== password){
- 	documentGetElementById('alert-confirmpass').innerHTML = 'Tus contraseñas deben de ser iguales'
- } 
+ 	document.getElementById('alert-confirmpass').innerHTML = 'Tus contraseñas deben de ser iguales'
+ } else{
+ 	document.getElementById('alert-confirmpass').innerHTML = ''
+ }
+/* if (createNewAccount== true) {
+ } else {
+ 	console.log(createNewAccount);
+}*/
 })
 
  return registrationContainer;
