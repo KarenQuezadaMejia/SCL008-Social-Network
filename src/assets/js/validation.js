@@ -2,15 +2,13 @@
 
 export const checkNewUser = (name, lastname, email, password, confirmPassword) => {
 	if (name === "" || lastname === "" || email === "" || password === "" || confirmPassword === ""){
-		return false
-	} else {
-		return true
-	}
-}
-export const checkEmail =(email) =>{
-let email2= 	
+		return false;
+	} 
+	
+	return true;
+
 }
 
 
 
-export con
+
