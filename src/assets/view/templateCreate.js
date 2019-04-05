@@ -5,7 +5,7 @@ Tenemos que importar la función que creamos, en el auth.j(createAccount)
 
 
 
-import{checkNewUser} from '../js/validation.js';
+import{newUser} from '../js/auth.js';
 
 export const templateCreate =() =>{
   
@@ -38,7 +38,7 @@ export const templateCreate =() =>{
     let password=registrationContainer.querySelector('#password').value;
     let confirmPassword=registrationContainer.querySelector('#confirm-password').value;
     //esta variable llama a una función que se encuentra en auth para después conectarla con firebase
-    let createNewAccount = checkNewUser(name, lastname, email, password, confirmPassword);
+    let createNewAccount = newUser(name, lastname, email, password, confirmPassword);
   //signUp(email,password);
  
 
@@ -77,11 +77,10 @@ export const templateCreate =() =>{
  } else{
  	document.getElementById('alert-confirmpass').innerHTML = ''
  }
-
- if (createNewAccount== true) {
+/* if (createNewAccount== true) {
  } else {
  	console.log(createNewAccount);
-}
+}*/
 })
 
  return registrationContainer;
