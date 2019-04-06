@@ -38,8 +38,7 @@ export const templateCreate =() =>{
     let password=registrationContainer.querySelector('#password').value;
     let confirmPassword=registrationContainer.querySelector('#confirm-password').value;
     //esta variable llama a una función que se encuentra en auth para después conectarla con firebase
-    let createNewAccount = newUser(name, lastname, email, password, confirmPassword);
-  //signUp(email,password);
+    newUser(name, lastname, email, password, confirmPassword);
  
 
  if(name ===""){
