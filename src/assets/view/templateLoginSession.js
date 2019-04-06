@@ -7,8 +7,7 @@ Tenemos importar la función que creamos en en auth.js
 
 import {
   signInGmail,
-  signInSession,
-  signUp} from '../js/auth.js';
+  signInSession} from '../js/auth.js';
 
 export const templateLoginSession =() =>{
    const containerLoginSession=document.createElement('div')
