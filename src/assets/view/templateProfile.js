@@ -1,5 +1,6 @@
 
-/*import{newUser} from '../js/auth.js';
+/* creación template profile
+import{newUser} from '../js/auth.js';
 import {
   signInGmail,
   signInSession,
