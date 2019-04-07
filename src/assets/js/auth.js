@@ -82,3 +82,12 @@ export const newUser = (name, lastname, email, password, confirmPassword) => {
     }
    
 } 
+
+//Funcion observador para poner foto del usuario
+/*firebase.auth().onAuthStateChanged(user=>{
+    if(user.photoURL){
+        $('#avatar').attr('src',user.photoURL)
+    }else{
+        $('#').attr('src','./assets/img/avatar.png') 
+    }
+})*/
