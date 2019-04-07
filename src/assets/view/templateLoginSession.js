@@ -22,7 +22,9 @@ export const templateLoginSession =() =>{
                                   <element id='sign-in-box' class='container-login'>
                                      <form class="create">
                                        <input id='email-user' class='email' type='email' placeholder='Ingresa tu correo'>
+                                       <p id="alert-email"></p>
                                        <input id='password-user'class='password' type='password' placeholder='Ingresa tu contraseña'>
+                                       <p id="alert-password"></p>
                                         <button id='sign-in' class='login-btn' type='button'>INICIAR SESIÓN</button>
                                      </form>
                                   </element>
@@ -41,6 +43,18 @@ export const templateLoginSession =() =>{
      btn.addEventListener('click',()=>{
       let email=containerLoginSession.querySelector('#email-user').value;
       let password=containerLoginSession.querySelector('#password-user').value;
+
+      if(email ===''){
+        document.getElementById('alert-email').innerHTML = '*Porfavor ingresa el email con el que te registraste'
+      } else{
+        document.getElementById('alert-email').innerHTML = ''
+      }
+     
+      if(password ===''){
+        document.getElementById('alert-password').innerHTML = '*Porfavor ingresa tu contraseña'
+      } else{
+        document.getElementById('alert-password').innerHTML = ''
+      }
     signInSession(email,password);
 });
 
@@ -50,7 +64,6 @@ btnGmail.addEventListener('click',signInGmail);
 
 const btnRegister = containerLoginSession.querySelector('#new-user-registration');
   btnRegister.addEventListener('click', () => {
-    console.log('click')
     templateCreate();
    //llamar al template create para mostrarse;
   });

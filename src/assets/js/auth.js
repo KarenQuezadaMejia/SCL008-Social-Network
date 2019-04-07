@@ -1,12 +1,15 @@
 /*  En este archivo creamos todas las funciones referentes a la autentificación del usuario */
 
 import {checkNewUser} from '../js/validation.js'
-
+import {checkUser} from '../js/validation.js'
 
 //Función para iniciar sesión, usuario ya registrado
-
 export const signInSession=(userEmail,userPassword)=>{
+    if (checkUser (userEmail,userPassword)){
     firebase.auth().signInWithEmailAndPassword(userEmail, userPassword)
+    .then(function(){
+        window.location.hash='#/wall';
+    })
     .catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -14,19 +17,21 @@ export const signInSession=(userEmail,userPassword)=>{
         // ...
         
       });
-     console.log(userEmail);
-     console.log(userPassword);
+     window.location.hash='#/wall';
     }
+}  
 
 //Función para iniciar sesión con gmail
 export const  signInGmail=()=> {
     const provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider).then(function(result) {
+    firebase.auth().signInWithPopup(provider)
+    .then(function(result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
         let token = result.credential.accessToken;
         // The signed-in user info.
         let user = result.user;
         // ...
+        window.location.hash='#/wall';
       }).catch(function(error) {
         // Handle Errors here.
         let errorCode = error.code;
@@ -38,6 +43,7 @@ export const  signInGmail=()=> {
         // ...
       }); 
       return 'login con Google';
+      
     }
 
 
@@ -46,6 +52,7 @@ export const  signInGmail=()=> {
 export const newUser = (name, lastname, email, password, confirmPassword) => {
     console.log(checkNewUser())
     if (checkNewUser (name, lastname, email, password, confirmPassword)){
+        window.location.hash='#/wall';
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(function(){
             var db = firebase.firestore();
@@ -56,7 +63,7 @@ export const newUser = (name, lastname, email, password, confirmPassword) => {
              password: password,
 
         })
-            .then(function(docRef) {
+        .then(function(docRef) {
             console.log("Document written with ID: ", docRef.id);
         })
         
@@ -73,4 +80,5 @@ export const newUser = (name, lastname, email, password, confirmPassword) => {
             // ...
         }); 
     }
+   
 } 
