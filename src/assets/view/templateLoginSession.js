@@ -10,10 +10,7 @@ Tenemos importar la función que creamos en en auth.js
 
 import {
   signInGmail,
-  signInSession,
-  } from '../js/auth.js';
-import { templateCreate } from './templateCreate.js';
-
+  signInSession} from '../js/auth.js';
 
 export const templateLoginSession =() =>{
    const containerLoginSession=document.createElement('div')
@@ -33,12 +30,11 @@ export const templateLoginSession =() =>{
                                   <button id='sign-in-gmail' class='fab fa-google' type='button'></button>
                                   </element>
                                   <element  class='container-new-user'>
-                                  <h4 id='new-user-registration'>Si no tienes cuenta, registrate <a href='#/create'>aquí</a></h4>
+                                  <a href='#/create' id='new-user-registration'>Si no tienes cuenta, registrate aquí</a>
                                   </element>
                                </element>`
                                  
     containerLoginSession.innerHTML = contentLoginSession;
-    //Botón de inicio de sesión que conecta con el container y con la función en auth
     const btn = containerLoginSession.querySelector('#sign-in');  //querySelector busca donde yo le indique, puede buscar en hijos
      btn.addEventListener('click',()=>{
       let email=containerLoginSession.querySelector('#email-user').value;
@@ -58,20 +54,17 @@ export const templateLoginSession =() =>{
     signInSession(email,password);
 });
 
-//Botón de gmail que conecta con el container y con la función en auth
 const btnGmail = containerLoginSession.querySelector('#sign-in-gmail');
 btnGmail.addEventListener('click',signInGmail);
 
 const btnRegister = containerLoginSession.querySelector('#new-user-registration');
   btnRegister.addEventListener('click', () => {
+
     templateCreate();
    //llamar al template create para mostrarse;
+
+   //changeHash('#/registration');
   });
 
 return containerLoginSession;
 };
-
-
-
-                                
-        
