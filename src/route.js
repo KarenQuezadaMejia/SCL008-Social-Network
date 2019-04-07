@@ -1,6 +1,9 @@
 
 import {templateCreate} from './assets/view/templateCreate.js';
 import {templateLoginSession} from './assets/view/templateLoginSession.js';
+import {templateWall} from './assets/view/templateWall.js';
+
+
 
 //  crear una función que reciba el hash (#) y según el match retorne otra función que va a imprimir el template en el html
 
@@ -8,7 +11,7 @@ const changeRouter = (hash) => {
   if (hash === '#/sign-in') {
     return showTemplate(hash);
   }
-    if(hash==='#/new-user-registration'){
+    if(hash==='#/wall'){
         return showTemplate(hash);
     }
     if(hash==='#/create'){
@@ -28,10 +31,10 @@ const showTemplate =(hash)=>{
 
     switch(router){
         case 'sign-in':
-        containerRoot.appendChild(templateLogin());
+        containerRoot.appendChild(templateLoginSession());
         break;
-        case 'new-user-registration':
-        containerRoot.appendChild(templateCreate());
+        case 'wall':
+        containerRoot.appendChild(templateWall());
         break;
         case 'create':
         containerRoot.appendChild(templateCreate());
