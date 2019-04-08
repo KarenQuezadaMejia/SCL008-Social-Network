@@ -1,8 +1,8 @@
-import {checkNewUser , checkEmail, checkInitSession,checkEmailInitSesion} 
-from "./../src/assets/js/validation.js"
+/*import {checkNewUser , checkEmail, checkInitSession,checkEmailInitSesion} 
+from "./../src/assets/js/validation.js"*/
 
 
-/* Testeo de las funciones que chequean crear cuenta()*/
+/* Testeo de las funciones que chequean crear cuenta()
 describe("checkNewUser ",()=>{
     it('deberia retornar false, si el usuario no ingresa correo y contraseña',()=>{
         expect(checkNewUser ("Betsi","Salas","","")).toBe(false);
@@ -34,7 +34,7 @@ describe(" checkEmail",()=>{
     })
 })
 
-/* Testeo de las funciones que chequean el inicio de sesión de usuarios registrados */
+/* Testeo de las funciones que chequean el inicio de sesión de usuarios registrados 
 describe("checkInitSession",()=>{
     it('deberia retornar true, si el usuario ingresa todos los campos',()=>{
         expect(checkInitSession("betsi.salas12@gmail.com","mypassword"))
@@ -61,4 +61,4 @@ describe("checkEmailInitSesion",()=>{
         expect(validateEmailSignIn("CorreoIncorrecto")).toBe(false);
     })
 })
- 
+ */
