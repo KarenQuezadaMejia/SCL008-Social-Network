@@ -6,8 +6,6 @@ export const checkUser = (email,password) => {
 	    return true;
 
 }
-export const checkNewUser = (name, lastname, email, password, confirmPassword) => {
-	if (name === '' || lastname === '' || email === '' || password === '' || confirmPassword === ''){
 
 /* función que valida que los campos del formulario de registros de  nuevo usuario no esten vacios, que la clave no sea menor a 6 caracteres, y ambas claves sean iguales*/
 export const checkNewUser = (name, lastname, email, password, confirmPassword) => {
