@@ -2,7 +2,7 @@
 	//var user = firebase.auth().currentUser;
 	//var name, email, photoUrl, uid, emailVerified;
 	//document.getElementById('root').innerHTML=''
-=======
+
 /* creación template profile
 import{newUser} from '../js/auth.js';
 import {
@@ -11,20 +11,22 @@ import {
   } from '../js/auth.js';
 import { templateCreate } from './templateCreate.js';*/
 
+import {logout} from './../js/auth.js';
+
 export const templateProfile() =>{
 	const containerProfile=document.createElement('div')
 	const contentProfile = `<header id='header-container'>
 	<figure class='header-avatar'>
 		<img id='avatar' src='./assets/img/avatar.png' alt='avatar'>
 	</figure>  
-	<div id='menu-container'>
+	/*<div id='menu-container'>
 		 <nav>
 			<div class='menu-bar'>
 				<a href='#/profile'>Pefil</a>
 				<a href='#/wall'>Muro</a>
-				<a href='#/'>Cerrar sesión</a>
+				<button onclick="window.location.href='#/sign-in" id='logOut'>Salir</button>
 		 </nav>
-	</div>
+	</div>*/
  </header>
 <h4>Realiza publicaciones de los libros que tienes disponibles
 para prestamo</h4>

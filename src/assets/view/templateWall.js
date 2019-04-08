@@ -1,4 +1,5 @@
 
+import {logout} from './../js/auth.js';
 
 export const templateWall = () =>{
 	//const user = firebase.auth().currentUser;
@@ -15,7 +16,7 @@ export const templateWall = () =>{
 		                     <div class='menu-bar'>
 			                     <a href='#/profile'>Pefil</a>
 			                     <a href='#/wall'>Muro</a>
-			                     <a href='#/'>Cerrar sesión</a>
+			                     <button onclick="window.location.href='#/sign-in'" id='logOut'>Salir</button>
 		                    </nav>
                      </div>
 		                </header>
@@ -37,6 +38,11 @@ export const templateWall = () =>{
   	                        </div>`
 
     containerWall.innerHTML= contentWall;
+
+    const scape = containerWall.querySelector('#logOut');
+    scape.addEventListener('click',() => {
+    	logout()
+    })
   
     return containerWall;
 }
