@@ -1,4 +1,4 @@
-/*import {checkNewUser , checkEmail, checkInitSession,checkEmailInitSesion} 
+import {checkNewUser , checkEmail, checkInitSession,checkEmailInitSesion} 
 from "./../src/assets/js/validation.js"*/
 
 
