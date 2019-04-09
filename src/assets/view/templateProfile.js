@@ -1,8 +1,5 @@
 
-	//var user = firebase.auth().currentUser;
-	//var name, email, photoUrl, uid, emailVerified;
-	//document.getElementById('root').innerHTML=''
-=======
+
 /* creación template profile
 import{newUser} from '../js/auth.js';
 import {
@@ -10,8 +7,11 @@ import {
   signInSession,
   } from '../js/auth.js';
 import { templateCreate } from './templateCreate.js';*/
+	//var user = firebase.auth().currentUser;
+	//var name, email, photoUrl, uid, emailVerified;
+	//document.getElementById('root').innerHTML=''
 
-export const templateProfile() =>{
+export const templateProfile=() =>{
 	const containerProfile=document.createElement('div')
 	const contentProfile = `<header id='header-container'>
 	<figure class='header-avatar'>
