@@ -1,4 +1,4 @@
-
+/*función que valida que los campos del formulario de inicio de sesión no esten vaciós*/
 export const checkUser = (email,password) => {
 	if (email === '' || password === ''){
 		return false;
@@ -18,6 +18,16 @@ export const checkNewUser = (name, lastname, email, password, confirmPassword) =
 	return true;
 
 }
+
+/*función que valida que los campos de titulo y autor en los post no esten vaciós*/
+export const checkPost = (title,author) => {
+	if (title === '' || author === ''){
+		return false;
+	} 
+	    return true;
+
+}
+
 
 /* función que valida que el correo tenga un '@' */
 export const checkEmail = (email) => {
