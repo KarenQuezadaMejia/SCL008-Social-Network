@@ -30,8 +30,8 @@ export const templateLoginSession =() =>{
                                   <button id='sign-in-gmail' class='fab fa-google' type='button'></button>
                                   </element>
                                   <element  class='container-new-user'>
-                                  <a href='#/create' id='new-user-registration'>Si no tienes cuenta, registrate aquí</a>
-                                  </element>
+                                  <h4 id='new-user-registration'>Si no tienes cuenta, registrate <a href='#/create'>aquí</a></h4>                                 
+                                </element>
                                </element>`
                                  
     containerLoginSession.innerHTML = contentLoginSession;

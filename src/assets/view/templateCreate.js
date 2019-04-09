@@ -41,37 +41,37 @@ export const templateCreate =() =>{
       let confirmPassword=registrationContainer.querySelector('#confirm-password').value;
 
       if(name ===""){
-        document.getElementById('alert-name').innerHTML = 'Debes ingresar tu nombre'
+        document.getElementById('alert-name').innerHTML = '*Porfavor ingresa tu nombre'
       } else{
         document.getElementById('alert-name').innerHTML = ''
       }
      
       if(lastname ===""){
-        document.getElementById('alert-lastname').innerHTML = 'Debes ingresar tu apellido'
+        document.getElementById('alert-lastname').innerHTML = '*Porfavor ingresa tu apellido'
       } else{
         document.getElementById('alert-lastname').innerHTML = ''
       }
      
       if(email ===""){
-        document.getElementById('alert-email').innerHTML = 'Debes ingresar tu correo'
+        document.getElementById('alert-email').innerHTML = '*Porfavor ingresa un correo'
       } else{
         document.getElementById('alert-email').innerHTML = ''
       }
      
       if(password ===""){
-        document.getElementById('alert-password').innerHTML = 'Debes ingresar una contraseña con un mínimo de 6 caracteres'
+        document.getElementById('alert-password').innerHTML = '*Porfavor ingresa una contraseña con un mínimo de 6 caracteres'
       } else{
         document.getElementById('alert-password').innerHTML = ''
       }
      
       if(confirmPassword ===""){
-        document.getElementById('alert-confirmpass').innerHTML = 'Debes confirmar tu contraseña'
+        document.getElementById('alert-confirmpass').innerHTML = '*Porfavor confirma tu contraseña'
       } else{
         document.getElementById('alert-confirmpass').innerHTML = ''
       }
      
       if(confirmPassword !== password){
-        document.getElementById('alert-confirmpass').innerHTML = 'Tus contraseñas deben de ser iguales'
+        document.getElementById('alert-confirmpass').innerHTML = '*Tus contraseñas no coinciden'
       } else{
         document.getElementById('alert-confirmpass').innerHTML = ''
       }
