@@ -1,7 +1,7 @@
 /*  En este archivo creamos todas las funciones referentes a la autentificación del usuario */
 
 import {checkNewUser} from '../js/validation.js'
-import {checkUser} from '../js/validation.js'
+import {checkInitSession} from '../js/validation.js'
 
 //Función para iniciar sesión, usuario ya registrado
 export const signInSession=(userEmail,userPassword)=>{
