@@ -3,22 +3,98 @@
 
 }
 body{
-	background-color: #CCCCFF;
+	background-color: #5A5AF2;
 	font-family: 'Merriweather', serif;
 	font-size: 20px;
 	margin: auto;
-	
+	color: white;	
 }
+
+#root{
+	margin: auto;
+	text-align: center;
+	width: 700px;
+	background-color: hsla(0, 100%, 90%, 0.3);
+	margin-bottom: 20px;
+	margin-top: 30px;
+	padding-bottom: 20px;			
+}
+
+.logo-img {
+    width: 200px;
+    text-align: center;
+  }
+
+button{
+	border-radius: 15px;
+	background-color: #CCCCFF	;
+	height: 40px;
+	width: 150px;
+	font-size: 16px; 
+	border: none;
+	margin-top: 10px;
+	color: white;
+}
+
+#logOut{
+
+}
+
+header{
+	float:right;
+}
+
+a{
+	margin-right: 10px;
+	text-decoration: none;
+}
+
+
+#avatar{
+	width: 300px;
+	margin-top: 50px;
+}
+
+h4{
+	margin-top: 30px;
+}
+
+#content-publish{
+	text-align: justify;
+	padding: 20px;
+}
+
+p{
+	margin: 10px;
+}
+
 
 @media (max-width: 700px){
 	body{
-		font-size: 35px;
+		font-size: 15px;
 	}
 
+#root{
+	margin: auto;
+	text-align: center;
+	width: 320px;
+	height: auto;
+	background-color: hsla(0, 100%, 90%, 0.3);
+	margin-top: 20px;
+	margin-bottom: 30px;
+	padding-bottom: 50px;	
+	padding: auto;
+}
+
+.signin-container{
+	margin-bottom: 20px;
+	height: 500px;
+}
+
   .logo-img {
-    width: 300px;
+    width: 80px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: none;
   }
 
   .email{
@@ -36,13 +112,7 @@ body{
 
 @media (min-width: 300px) {
 	.root{
-		display:-webkit-flex;
-    	display:-ms-flexbox;
-   	 	display: flex;
-    	flex-direction: row;   
-   		 height: 100vh;   
-    	align-items: center; 
-		text-align: center;
+		
 	
 	}
 
@@ -96,6 +166,7 @@ button{
 	height: 40px;
 	width: 150px;
 	font-size: 16px; 
+	border: none;
 
 }
 
@@ -108,4 +179,6 @@ button:hover{
 }
 
 }
+
+
 
