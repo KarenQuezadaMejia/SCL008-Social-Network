@@ -1,5 +1,3 @@
-
-
 /* creación template profile
 import{newUser} from '../js/auth.js';
 import {
@@ -47,4 +45,3 @@ Libro"></textarea>
   
     return containerProfile;
 }
-

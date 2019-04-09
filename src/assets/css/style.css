@@ -1,8 +1,13 @@
+*{ 
+	margin:0px auto;
+
+}
 body{
 	background-color: #CCCCFF;
 	font-family: 'Merriweather', serif;
 	font-size: 20px;
 	margin: auto;
+	
 }
 
 @media (max-width: 700px){
@@ -29,10 +34,16 @@ body{
 }
 
 
-@media (min-width: 320px) {
+@media (min-width: 300px) {
 	.root{
+		display:-webkit-flex;
+    	display:-ms-flexbox;
+   	 	display: flex;
+    	flex-direction: row;   
+   		 height: 100vh;   
+    	align-items: center; 
 		text-align: center;
-
+	
 	}
 
 	#loginSession{

@@ -9,8 +9,7 @@ export const signInSession=(userEmail,userPassword)=>{
     firebase.auth().signInWithEmailAndPassword(userEmail, userPassword)
     .then(function(){
         window.location.hash='#/wall';
-    })
-    .catch(function(error) {
+    }).catch(function(error){
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -82,4 +81,8 @@ export const newUser = (name, lastname, email, password, confirmPassword) => {
     }
    
 } 
+
+export const logout =() => {
+    firebase.auth().signOut()
+}
 

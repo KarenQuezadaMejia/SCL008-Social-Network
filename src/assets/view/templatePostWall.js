@@ -15,4 +15,3 @@ export const templatePostWall = (user) => {
     })
     eyes();
     return containerPostWall;
-   
