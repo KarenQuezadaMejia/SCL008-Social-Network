@@ -1,7 +1,7 @@
 
 /* función que valida que los campos del formulario de  iniciar sesión de usuario ya registrado*/
 export const checkInitSession = (userEmail,userPassword) => {
-	if (userEmail === "" || userPassword === "" || userPassword.lengt < 6 || !checkEmail(userEmail)) {
+	if (userEmail === "" || userPassword === "" || userPassword.length < 6 || !checkEmail(userEmail)) {
 		return false;
 	} else {
 		return true;
@@ -17,7 +17,7 @@ export const checkEmail = (email) => {
 /* función que valida que los campos del formulario de registros de  nuevo usuario no esten vacios, que la clave no sea menor a 6 caracteres, y ambas claves sean iguales*/
 export const checkNewUser = (name, lastname, email, password, confirmPassword) => {
 	if (name === "" || lastname === "" || email === "" || password === "" || confirmPassword === ""
-		|| password.lengt < 6 || password != confirmPassword ||!checkEmail(email)) {
+		|| password.length< 6 || password != confirmPassword ||!checkEmail(email)) {
 
 		return false;
 	}
@@ -26,14 +26,14 @@ export const checkNewUser = (name, lastname, email, password, confirmPassword) =
 
 }
 
-/*función que valida que los campos de titulo y autor en los post no esten vaciós
+//función que valida que los campos de titulo y autor en los post no esten vaciós
 export const checkPost = (title,author) => {
 	if (title === '' || author === ''){
 		return false;
 	} 
 	    return true;
 
-}*/
+}
 
 
 
