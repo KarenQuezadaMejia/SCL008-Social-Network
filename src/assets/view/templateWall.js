@@ -1,4 +1,6 @@
 import {newPost} from '../js/posts.js';
+import {logout} from './../js/auth.js';
+
 
 export const templateWall = () =>{
 
@@ -20,8 +22,8 @@ export const templateWall = () =>{
 		                     <div class='menu-bar'>
 			                     <a href='#/profile'>Pefil</a>
 			                     <a href='#/wall'>Muro</a>
-													 <a href='#/'>Cerrar sesión</a>
-												 </div>
+								<button onclick="window.location.href='#/sign-in'" id='logOut'>Salir</button>
+							</div>
 		                    </nav>			
 										</div>
 		                </header>
@@ -55,7 +57,9 @@ export const templateWall = () =>{
 												<textarea id='comment' placeholder='Ingresa tu comentario'></textarea>
 												<button type='button' class='publish' id='btn-comment'>Publicar</button>
 										</element>
+  	                     
   	                        `
+
 
 		containerWall.innerHTML= contentWall;
 		const btnPublish= containerWall.querySelector('#btn-post');  //querySelector busca donde yo le indique, puede buscar en hijos
@@ -83,5 +87,10 @@ export const templateWall = () =>{
 
     
 })
+    const scape = containerWall.querySelector('#logOut');
+    scape.addEventListener('click',() => {
+    	logout()
+    })
+
 return containerWall;
 };

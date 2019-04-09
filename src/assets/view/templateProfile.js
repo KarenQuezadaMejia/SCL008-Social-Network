@@ -9,6 +9,9 @@ import { templateCreate } from './templateCreate.js';*/
 	//var name, email, photoUrl, uid, emailVerified;
 	//document.getElementById('root').innerHTML=''
 
+import {logout} from './../js/auth.js';
+
+
 export const templateProfile=() =>{
 	const containerProfile=document.createElement('div')
 	const contentProfile = `<header id='header-container'>
@@ -20,7 +23,7 @@ export const templateProfile=() =>{
 			<div class='menu-bar'>
 				<a href='#/profile'>Pefil</a>
 				<a href='#/wall'>Muro</a>
-				<a href='#/'>Cerrar sesión</a>
+				<button onclick="window.location.href='#/sign-in'" id='logOut'>Salir</button>
 		 </nav>
 	</div>
  </header>
