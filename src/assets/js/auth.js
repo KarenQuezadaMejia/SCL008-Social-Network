@@ -5,7 +5,7 @@ import {checkUser} from '../js/validation.js'
 
 //Función para iniciar sesión, usuario ya registrado
 export const signInSession=(userEmail,userPassword)=>{
-    if (checkUser (userEmail,userPassword)){
+    if (checkInitSession (userEmail,userPassword)){
     firebase.auth().signInWithEmailAndPassword(userEmail, userPassword)
     .then(function(){
         window.location.hash='#/wall';
