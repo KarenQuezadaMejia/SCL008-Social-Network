@@ -15,26 +15,27 @@ import {logout} from './../js/auth.js';
 export const templateProfile=() =>{
 	const containerProfile=document.createElement('div')
 	const contentProfile = `<header id='header-container'>
-	<figure class='header-avatar'>
-		<img id='avatar' src='./assets/img/avatar.png' alt='avatar'>
-	</figure>  
-	<div id='menu-container'>
-		 <nav>
+		<div id='menu-container'>
+		<nav>
 			<div class='menu-bar'>
 				<a href='#/profile'>Pefil</a>
 				<a href='#/wall'>Muro</a>
 				<button onclick="window.location.href='#/sign-in'" id='logOut'>Salir</button>
-		 </nav>
-	</div>
- </header>
-<h4>Realiza publicaciones de los libros que tienes disponibles
-para prestamo</h4>
+			</div>
+		</nav>
+		</div>
+ 		</header>
+		<img id='avatar' src='./assets/img/avatar.png' alt='avatar'>
+
+
 				<div id="content-publish">
-				<p>Titulo</p>
+					<h4>Realiza publicaciones de los libros que tienes disponibles
+para prestamo</h4>
+				<p>Titulo: </p>
 <input type="text" name="title" placeholder="Ingresa el Titulo 
 del Libro">
-				<p>Autor</p>
-				<input type="text" name="title" placeholder="Ingresa el autor">
+				<p>Autor: </p>
+				<span><input type="text" name="title" placeholder="Ingresa el autor"></span>
 				<p>Calificación</p>
 				<p>Opinión Personal</p>
 <textarea id="opinion" placeholder="Ingresa tu opinión del 
