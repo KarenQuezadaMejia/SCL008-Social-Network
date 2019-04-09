@@ -62,8 +62,10 @@ export const templateWall = () =>{
     btnPublish.addEventListener('click',()=>{
      let title = containerWall.querySelector('#title').value
 	   let author = containerWall.querySelector('#author').value
-	   let rate = containerWall.querySelector('#rate').value
+		 //let rate = containerWall.querySelector('#rate').value
+		 let rate = 5;
 		 let opinion = containerWall.querySelector('#opinion').value
+		 let userid = firebase.auth().currentUser.displayName;
 		 
 		 if(title ===''){
 			document.getElementById('alert-title').innerHTML = '*Olvidaste colocar el titulo'
@@ -77,7 +79,7 @@ export const templateWall = () =>{
 			document.getElementById('alert-author').innerHTML = ''
 		}
 
-		newPost(user,title,author,rate,opinion);
+		newPost(userid,title,author,rate,opinion);
 
     
 })

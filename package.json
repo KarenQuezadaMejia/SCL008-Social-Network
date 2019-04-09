@@ -1,39 +1,27 @@
 {
-  "name": "social-network",
+  "name": "scl008-social-network-",
   "version": "1.0.0",
   "description": "social network project",
   "main": "src/index.html",
   "scripts": {
-    "test": "jest--coverage",
-    "slint": "eslint ext .js src/test",
+    "test": "jest --coverage",
+    "eslint": "eslint --ext .js src/ test/",
     "pretest": "npm run eslint && npm run htmlhint",
     "htmlhint": "htmlhint src/*.html",
     "deploy": "gh-pages -d src/"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KarenQuezadaMejia/SCL008-Social-Network.git"
-  },
-  "keywords": [
-    "0666kqm"
-  ],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KarenQuezadaMejia/SCL008-Social-Network/issues"
-  },
-  "homepage": "https://github.com/KarenQuezadaMejia/SCL008-Social-Network#readme",
   "dependencies": {
-    "@babel/core": "^7.4.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.4.0",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.3",
     "babel-core": "^6.26.3",
-    "babel-jest": "^24.5.0",
-    "eslint": "^5.15.3",
+    "babel-jest": "^24.7.1",
+    "eslint": "^5.16.0",
     "eslint-plugin-jest": "^22.4.1",
     "express": "^4.16.4",
     "gh-pages": "^2.0.1",
     "htmlhint": "^0.11.0",
-    "jest": "^24.5.0",
-    "save": "^2.3.3"
+    "jest": "^24.7.1"
   }
-}
+ }
