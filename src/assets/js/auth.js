@@ -85,4 +85,3 @@ export const newUser = (name, lastname, email, password, confirmPassword) => {
 export const logout =() => {
     firebase.auth().signOut()
 }
-
