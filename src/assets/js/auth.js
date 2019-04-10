@@ -16,7 +16,7 @@ export const signInSession=(userEmail,userPassword)=>{
         // ...
         
       });
-     window.location.hash='#/wall';
+    
     }
 }  
 

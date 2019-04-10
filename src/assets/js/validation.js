@@ -12,7 +12,7 @@ export const checkEmail = (email) => {
 	let newModel = /\S+@\S+\.\S+/;
 	return newModel.test(email);
 }
-
+	
 
 /* función que valida que los campos del formulario de registros de  nuevo usuario no esten vacios, que la clave no sea menor a 6 caracteres, y ambas claves sean iguales*/
 export const checkNewUser = (name, lastname, email, password, confirmPassword) => {
