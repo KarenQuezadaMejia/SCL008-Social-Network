@@ -4,10 +4,7 @@ Tenemos que importar la función que creamos, en el auth.j(createAccount)
 */
 
 import{newUser} from '../js/auth.js';
-
-//const changeHash = (hash) => {
-//  location.hash = hash;
-//}
+import { checkEmail } from '../js/validation.js';
 
 
 export const templateCreate =() =>{
@@ -52,19 +49,19 @@ export const templateCreate =() =>{
         document.getElementById('alert-lastname').innerHTML = ''
       }
      
-      if(email ===""){
-        document.getElementById('alert-email').innerHTML = '*Porfavor ingresa un correo'
+      if(email ===""|| !checkEmail(email)){
+        document.getElementById('alert-email').innerHTML = '*Porfavor ingresa un correo válido'
       } else{
         document.getElementById('alert-email').innerHTML = ''
       }
      
-      if(password ===""){
+      if(password ==="" || password.length<6){
         document.getElementById('alert-password').innerHTML = '*Porfavor ingresa una contraseña con un mínimo de 6 caracteres'
       } else{
         document.getElementById('alert-password').innerHTML = ''
       }
      
-      if(confirmPassword ===""){
+      if(confirmPassword ==="" ){
         document.getElementById('alert-confirmpass').innerHTML = '*Porfavor confirma tu contraseña'
       } else{
         document.getElementById('alert-confirmpass').innerHTML = ''

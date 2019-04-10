@@ -13,10 +13,9 @@ export const signInSession=(userEmail,userPassword)=>{
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        // ...
-        
+        // ...   
       });
-     window.location.hash='#/wall';
+    
     }
 }  
 
@@ -49,8 +48,12 @@ export const  signInGmail=()=> {
 
 //Función para registro de nuevo usuario
 export const newUser = (name, lastname, email, password, confirmPassword) => {
+<<<<<<< HEAD
     console.log(checkNewUser())
     if (checkNewUser(name, lastname, email, password, confirmPassword)){
+=======
+    if (checkNewUser (name, lastname, email, password, confirmPassword)){
+>>>>>>> 0ad013f61e9ca3f81ded0fd6065c39300a04cf7b
         window.location.hash='#/wall';
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(function(){
