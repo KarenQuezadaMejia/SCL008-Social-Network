@@ -5,6 +5,7 @@ import {logout} from './../js/auth.js';
 export const templateWall = () =>{
 
 	const user = firebase.auth().currentUser;
+	console.log(user)
 
 	if(user == null){
 		alert('Para crear el post debes iniciar sesión')
@@ -13,20 +14,20 @@ export const templateWall = () =>{
 
 	const containerWall=document.createElement('div')
 	const contentWall = `
-	                  <header id='header-container'>
-	                   <figure class='header-avatar'>
-		                   <img id='avatar' src='./assets/img/avatar.png' alt='avatar'>
-	                   </figure>  
-                     <div id='menu-container'>
-		                    <nav>
-		                     <div class='menu-bar'>
+										<header id='header-container'>
+										  <div id='menu-container'>
+		                    <nav class='menu-bar'>
 			                     <a href='#/profile'>Pefil</a>
 			                     <a href='#/wall'>Muro</a>
-								<button onclick="window.location.href='#/sign-in'" id='logOut'>Salir</button>
-							</div>
-		                    </nav>			
-										</div>
-		                </header>
+								           <button onclick="window.location.href='#/sign-in'" id='logOut'>Salir</button>
+										    </nav>	    
+		                  </div>  
+										</header>
+
+										<figure class='avatar'>
+											 <img id='avatar' src='./assets/img/avatar.png' alt='avatar'> 
+											 <p id='profile-name'>${firebase.auth().currentUser.displayName}</p>
+	                   </figure>
 		                <element id='content-publish'>
 			                  <p>Titulo</p>
 								        <input id='title' type='text' name='title' placeholder='Ingresa el Titulo 
