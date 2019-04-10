@@ -6,10 +6,6 @@ Tenemos que importar la función que creamos, en el auth.j(createAccount)
 import{newUser} from '../js/auth.js';
 import { checkEmail } from '../js/validation.js';
 
-//const changeHash = (hash) => {
-//  location.hash = hash;
-//}
-
 
 export const templateCreate =() =>{
   

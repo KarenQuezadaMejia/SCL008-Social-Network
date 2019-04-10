@@ -13,10 +13,9 @@ export const signInSession=(userEmail,userPassword)=>{
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        // ...
-        
+        // ...   
       });
-     window.location.hash='#/wall';
+    
     }
 }  
 
