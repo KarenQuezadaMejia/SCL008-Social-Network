@@ -49,7 +49,6 @@ export const  signInGmail=()=> {
 
 //Función para registro de nuevo usuario
 export const newUser = (name, lastname, email, password, confirmPassword) => {
-    console.log(checkNewUser())
     if (checkNewUser (name, lastname, email, password, confirmPassword)){
         window.location.hash='#/wall';
         firebase.auth().createUserWithEmailAndPassword(email, password)
