@@ -3,18 +3,18 @@
 
 }
 body{
-	background-color: #5A5AF2;
+	background-color: #96ADFC;
 	font-family: 'Merriweather', serif;
 	font-size: 20px;
 	margin: auto;
-	color: white;	
+	color: #606060;	
 }
 
-#root{
+#root{	
 	margin: auto;
 	text-align: center;
 	width: 700px;
-	background-color: hsla(0, 100%, 90%, 0.3);
+	background-color: #DBE1F1;
 	margin-bottom: 20px;
 	margin-top: 30px;
 	padding-bottom: 20px;			
@@ -65,7 +65,8 @@ h4{
 }
 
 p{
-	margin: 10px;
+	margin-top: 5px;
+	margin-bottom: 10px;
 }
 
 
@@ -79,7 +80,7 @@ p{
 	text-align: center;
 	width: 320px;
 	height: auto;
-	background-color: hsla(0, 100%, 90%, 0.3);
+	background-color: #DBE1F1;
 	margin-top: 20px;
 	margin-bottom: 30px;
 	padding-bottom: 50px;	
@@ -98,14 +99,16 @@ p{
   }
 
   .email{
-	margin-bottom: 10px;
 	font-size: 20px;
 
 }
 
 .password{
-	margin-bottom: 15px;
 	font-size: 20px;
+}
+p{
+	padding: 0px;
+	margin-bottom: 5px;
 }
 }
 
@@ -134,27 +137,27 @@ p{
 
 .create{
 	text-align: center;
-	width: 150px;
+	margin: auto;
+}
+
+h2{
+	margin-bottom: 15px;
 }
 
 .email{
-	margin-bottom: 10px;
 	font-size: 20px;
 
 }
 
 .password{
-	margin-bottom: 15px;
 	font-size: 20px;
 }
 
 .user-name{
-	margin-bottom: 15px;
 	font-size: 20px;
 }
 
 .user-lastname{
-	margin-bottom: 15px;
 	font-size: 20px;
 }
 
@@ -169,7 +172,7 @@ button{
 }
 
 button:hover{
-	background-color: #2E64FE;
+	background-color: #96ADFC;
 }
 
 .fa, .fab, .fal, .far, .fas {
