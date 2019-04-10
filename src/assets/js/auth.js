@@ -56,7 +56,7 @@ export const newUser = (name, lastname, email, password, confirmPassword) => {
         .then(function(){
             var db = firebase.firestore();
             db.collection("users").add({
-             first: name,
+             name: name,
              last: lastname,
              email: email,
              password: password,
