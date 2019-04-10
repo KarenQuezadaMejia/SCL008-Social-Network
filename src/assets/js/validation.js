@@ -26,7 +26,6 @@ export const checkNewUser = (name, lastname, email, password, confirmPassword) =
 
 }
 
-//función que valida que los campos de titulo y autor en los post no esten vaciós
 export const checkPost = (title,author) => {
 	if (title === '' || author === ''){
 		return false;
