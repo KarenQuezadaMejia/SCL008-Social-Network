@@ -17,7 +17,7 @@ import{templateCreate} from '../view/templateCreate.js';
 export const templateLoginSession =() =>{
    const containerLoginSession=document.createElement('div')
    const contentLoginSession= `<element id='signin-container' class='signin-container'>
-                                  <img src='./assets/img/logoSN.png' alt='logo' class='logo-img'>
+                                  <img src='./assets/img/logoSN.png' alt='logo' class='logo-img' href='#/sign-in'>
                                   <element id='sign-in-box' class='container-login'>
                                      <form class="create">
                                        <input id='email-user' class='email' type='email' placeholder='Ingresa tu correo'>

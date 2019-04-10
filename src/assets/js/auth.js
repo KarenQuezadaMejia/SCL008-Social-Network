@@ -13,6 +13,7 @@ export const signInSession=(userEmail,userPassword)=>{
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
+        alert(error.message)
         // ...   
       });
     
@@ -48,13 +49,9 @@ export const  signInGmail=()=> {
 
 //Función para registro de nuevo usuario
 export const newUser = (name, lastname, email, password, confirmPassword) => {
-<<<<<<< HEAD
-    console.log(checkNewUser())
+
     if (checkNewUser(name, lastname, email, password, confirmPassword)){
-=======
-    if (checkNewUser (name, lastname, email, password, confirmPassword)){
->>>>>>> 0ad013f61e9ca3f81ded0fd6065c39300a04cf7b
-        window.location.hash='#/wall';
+         alert('Creación de usuario exitosa')
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(function(){
             var db = firebase.firestore();
@@ -72,6 +69,7 @@ export const newUser = (name, lastname, email, password, confirmPassword) => {
         .catch(function(error) {
             console.error("Error adding document: ", error);
         });
+        window.location.hash='#/wall';
         })
 
         
@@ -87,4 +85,30 @@ export const newUser = (name, lastname, email, password, confirmPassword) => {
 
 export const logout =() => {
     firebase.auth().signOut()
+    .then(function() {
+      }).catch(function(error) {
+        // An error happened.
+      });
+      
+    }
+
+
+//Función para confirmar si hay usuario logueado
+export const observer =()=>{
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) { 
+        console.log('inicio de sesión exitosa')
+          // User is signed in.
+          var displayName = user.displayName;
+          var email = user.email;
+          var photoURL = user.photoURL;
+          var uid = user.uid;
+          var providerData = user.providerData;
+          // ...
+        } else {
+         console.log('no existe usuario activo')
+        }
+      });
 }
+
+   

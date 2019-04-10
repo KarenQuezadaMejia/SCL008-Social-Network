@@ -87,8 +87,8 @@ export const templateWall = () =>{
 
     
 })
-    const scape = containerWall.querySelector('#logOut');
-    scape.addEventListener('click',() => {
+    const escape = containerWall.querySelector('#logOut');
+    escape.addEventListener('click',() => {
     	logout()
     })
 
