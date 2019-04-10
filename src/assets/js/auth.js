@@ -93,9 +93,9 @@ export const logout =() => {
     }
 
 
-//Función para confirmar si hay usuario logueado
+/*Función para confirmar si hay usuario logueado
 export const observer =()=>{
-    firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged(function(user) { 
         if (user) { 
         console.log('inicio de sesión exitosa')
           // User is signed in.
@@ -109,6 +109,6 @@ export const observer =()=>{
          console.log('no existe usuario activo')
         }
       });
-}
+}*/
 
    
