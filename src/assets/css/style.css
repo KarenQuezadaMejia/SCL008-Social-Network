@@ -10,6 +10,11 @@ body{
 	color: #606060;	
 }
 
+#logOut{
+	background-color:  #DBE1F1;
+	color: #606060;
+}
+
 #root{	
 	margin: auto;
 	text-align: center;
@@ -37,7 +42,7 @@ button{
 }
 
 #logOut{
-
+	color: #606060;
 }
 
 header{
@@ -87,6 +92,10 @@ p{
 	padding: auto;
 }
 
+#logOut{
+	background-color:  #DBE1F1;
+	color: #606060;
+}
 .signin-container{
 	margin-bottom: 20px;
 	height: 500px;
@@ -110,6 +119,10 @@ p{
 	padding: 0px;
 	margin-bottom: 5px;
 }
+#avatar{
+	border-radius: 100px;
+}
+
 }
 
 

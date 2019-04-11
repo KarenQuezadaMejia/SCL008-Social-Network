@@ -3,9 +3,15 @@
 import {checkNewUser} from '../js/validation.js'
 import {checkInitSession} from '../js/validation.js'
 
+
+
+
 //Función para iniciar sesión, usuario ya registrado
 export const signInSession=(userEmail,userPassword)=>{
     if (checkInitSession (userEmail,userPassword)){
+        alert('Bienvenido, haz iniciado sesión')
+        //getUserData(userEmail);
+        //console.log(userEmail);
     firebase.auth().signInWithEmailAndPassword(userEmail, userPassword)
     .then(function(){
         window.location.hash='#/wall';
@@ -54,9 +60,9 @@ export const newUser = (name, lastname, email, password, confirmPassword) => {
          alert('Creación de usuario exitosa')
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(function(){
-            var db = firebase.firestore();
+            let db = firebase.firestore();
             db.collection("users").add({
-             name: name,
+             first: name,
              last: lastname,
              email: email,
              password: password,
@@ -92,23 +98,60 @@ export const logout =() => {
       
     }
 
+//Función que ingresa a firestore para obtener nombre y apellido del usuario registrado
+export const getUserData=(email)=>{
+	let db = firebase.firestore();
+	db.collection('users').where('email', '==', email).get()    
+	.then((querySnapshot)=> {
+	querySnapshot.forEach((doc)=> {
+			firebase.auth().currentUser.name = doc.data().first + " " +doc.data().last;
+            console.log('Aquí está pasando por el getUserData');
+            //console.log(firebase.auth().currentUser.name);
+	});
+})
+ .catch(function(error) {
+	console.log("Error getting documents: ", error);
+});
 
-/*Función para confirmar si hay usuario logueado
+} 
+   
+
+    
+
+//Función para confirmar si hay usuario logueado
 export const observer =()=>{
     firebase.auth().onAuthStateChanged(function(user) { 
-        if (user) { 
+        if (user) {    
         console.log('inicio de sesión exitosa')
+    
           // User is signed in.
-          var displayName = user.displayName;
-          var email = user.email;
-          var photoURL = user.photoURL;
-          var uid = user.uid;
-          var providerData = user.providerData;
-          // ...
+     let displayName=user.displayName   
+      if(displayName == undefined){
+          getUserData(user.email);
+      }
+
+
+     let photoURL= user.photoURL;
+     if(user.photoURL == undefined){
+        photoURL= 'http://img.fenixzone.net/i/zwc5Wfh.png';
+      } 
+      if (document.getElementById('avatar')){
+        document.getElementById('avatar').src = photoURL;
+      }      
+
+          
         } else {
          console.log('no existe usuario activo')
+         window.location.hash="";
         }
       });
-}*/
+}
 
    
+
+
+  
+
+
+
+

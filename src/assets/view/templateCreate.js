@@ -8,7 +8,6 @@ import { checkEmail } from '../js/validation.js';
 
 
 export const templateCreate =() =>{
-  
     const registrationContainer = document.createElement('div');
     const registrationTemplate = `<div class="signup-container" id="sign-up-box">
                                     <a href='#/sign-in'><img src='./assets/img/logoSN.png' alt='logo' class='logo-img'></a>
