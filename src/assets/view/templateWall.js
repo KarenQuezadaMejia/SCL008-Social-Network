@@ -1,16 +1,24 @@
 import {newPost} from '../js/posts.js';
-import {logout} from './../js/auth.js';
+import {logout,observer} from './../js/auth.js';
+
 
 
 export const templateWall = () =>{
-
+	observer();
 	const user = firebase.auth().currentUser;
-	console.log(user)
-
 	if(user == null){
 		alert('Para crear el post debes iniciar sesión')
 		return
 	}
+	
+	
+	let profileName=firebase.auth().currentUser.name;
+	if(firebase.auth().currentUser.displayName){	
+		console.log("Está pasando por el if indefinido")
+		profileName=firebase.auth().currentUser.displayName;
+	}
+	
+
 
 	const containerWall=document.createElement('div')
 	const contentWall = `
@@ -25,8 +33,8 @@ export const templateWall = () =>{
 										</header>
 
 										<figure class='avatar'>
-											 <img id='avatar' src='./assets/img/avatar.png' alt='avatar'> 
-											 <p id='profile-name'>${firebase.auth().currentUser.displayName}</p>
+											 <img src=''id='avatar' alt='avatar'> 
+											 <p id='profile-name'>${profileName}</p>
 	                   </figure>
 		                <element id='content-publish'>
 			                  <p>Titulo</p>

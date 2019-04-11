@@ -1,4 +1,4 @@
-import { checkEmail,checkNewUser,checkInitSession}
+import { checkEmail,checkNewUser,checkInitSession,checkPost}
 from './../src/assets/js/validation.js'
 
 
@@ -50,7 +50,18 @@ describe('checkInitSession',()=>{
     })
 })
 
-
+describe('checkPost',()=>{
+    it('deberia retornar true, si el usuario ingresa su opinion',()=>{
+        expect(checkPost ('Muy buen libro','mycoment')).toBe(true);
+    })
+    it('deberia retornar false, si el usuario no ingresa todos los campos',()=>{
+        expect(checkPost ('La Divina Comedia',''))
+        .toBe(false);
+    })
+    it('deberia retornar false, si el usuario no completa ningún campo',()=>{
+        expect(checkPost ('','')).toBe(false);
+    })
+ })
  
 
 
