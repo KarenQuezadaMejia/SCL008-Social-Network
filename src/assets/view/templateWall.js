@@ -34,24 +34,21 @@ export const templateWall = () =>{
 
 										<figure class='avatar'>
 											 <img src=''id='avatar' alt='avatar'> 
-											 <p id='profile-name'>${profileName}</p>
+											 <h3 id='profile-name'>${profileName}</h3>
 	                   </figure>
 		                <element id='content-publish'>
-			                  <p>Titulo</p>
-								        <input id='title' type='text' name='title' placeholder='Ingresa el Titulo 
-												 del Libro'>
-												 <p id="alert-title"></p>
-			                  <p>Autor</p>
-												<input id='author'type='text' name='title' placeholder='Ingresa el autor'>
-												<p id="alert-author"></p>
-												<p>Calificación</p>
-												<div id='rate'class="ec-stars-wrapper">
-	                          <a href="#" data-value="1" title="Vote 1 star">&#9733;</a>
-	                          <a href="#" data-value="2" title="Vote 2 stars">&#9733;</a>
-	                          <a href="#" data-value="3" title="Vote 3 stars">&#9733;</a>
-	                          <a href="#" data-value="4" title="Vote 4 stars">&#9733;</a>
-                          	<a href="#" data-value="5" title="Vote 5 stars">&#9733;</a>
-                        </div>
+			                <p>Titulo  <span><input id='title' type='text' name='title' placeholder='Ingresa el Titulo del Libro'></p>
+								<p id="alert-title"></p>
+			                <p>Autor  <span><input id='author'type='text' name='title' placeholder='Ingresa el autor'></p>
+								<p id="alert-author"></p>
+							<p>Calificación</p>
+							<div id='rate'class="ec-stars-wrapper">
+	                          	<a href="#" data-value="1" title="Vote 1 star">&#9733;</a>
+	                          	<a href="#" data-value="2" title="Vote 2 stars">&#9733;</a>
+	                          	<a href="#" data-value="3" title="Vote 3 stars">&#9733;</a>
+	                          	<a href="#" data-value="4" title="Vote 4 stars">&#9733;</a>
+                          		<a href="#" data-value="5" title="Vote 5 stars">&#9733;</a>
+                        	</div>
 			                  <p>Opinión Personal</p>
 								        <textarea id='opinion' placeholder='Ingresa tu opinión del 
 												 Libro'></textarea>
