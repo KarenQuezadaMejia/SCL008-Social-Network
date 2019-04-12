@@ -1,0 +1,221 @@
+*{ 
+	margin:0px auto;
+
+}
+body{
+	background-color: #96ADFC;
+	font-family: 'Merriweather', serif;
+	font-size: 20px;
+	margin: auto;
+	color: #606060;	
+}
+
+#logOut{
+	background-color:  #DBE1F1;
+	color: #606060;
+}
+
+#root{	
+	margin: auto;
+	text-align: center;
+	width: 700px;
+	background-color: #DBE1F1;
+	margin-bottom: 20px;
+	margin-top: 30px;
+	padding-bottom: 20px;			
+}
+
+.logo-img {
+    width: 200px;
+    text-align: center;
+  }
+
+button{
+	border-radius: 15px;
+	background-color: #CCCCFF	;
+	height: 40px;
+	width: 150px;
+	font-size: 16px; 
+	border: none;
+	margin-top: 10px;
+	color: white;
+}
+
+#logOut{
+	color: #606060;
+}
+
+header{
+	float:right;
+}
+
+a{
+	margin-right: 10px;
+	text-decoration: none;
+}
+
+
+#avatar{
+	margin: auto;
+	border-radius: 100px;
+	width: 200px;
+	margin-top: 80px;
+	margin-left: 200px;
+}
+h3{
+	text-align: center;
+	margin-bottom: 15px;
+}
+h4{
+	margin-top: 30px;
+}
+
+#content-publish{
+	margin: auto;
+	text-align: justify;
+}
+
+p{
+	margin-top: 5px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+#rate{
+	margin-left: 15px;
+}
+
+textarea{
+	width: 200px;
+	height: 150px;
+}
+
+input{
+	text-align: center;
+}
+
+@media (max-width: 700px){
+
+	body{
+		font-size: 15px;
+	}
+
+#logOut{
+	background-color: #DBE1F1;
+}
+
+#root{
+	margin: auto;
+	text-align: center;
+	width: 320px;
+	height: auto;
+	background-color: #DBE1F1;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	padding-bottom: 50px;	
+	padding-left: 5px;
+}
+
+#logOut{
+	background-color:  #DBE1F1;
+	color: #606060;
+}
+.signin-container{
+	margin-bottom: 20px;
+	height: 500px;
+}
+
+  .logo-img {
+    width: 80px;
+    text-align: center;
+    margin-top: none;
+  }
+
+  .email{
+	font-size: 20px;
+
+}
+
+.password{
+	font-size: 20px;
+}
+p{
+	padding: 0px;
+	margin-bottom: 5px;
+}
+#avatar{
+	margin: auto;
+	border-radius: 100px;
+	width: 200px;
+}
+
+
+}
+
+
+@media (min-width: 320px) {
+
+
+	#loginSession{
+		text-align: center;
+	}
+
+  .logo-img {
+    width: 200px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+
+  .signup-container{
+  	text-align: center;
+  }
+
+
+.create{
+	text-align: center;
+	margin: auto;
+}
+
+h2{
+	margin-bottom: 15px;
+}
+
+.email{
+	font-size: 20px;
+
+}
+
+.password{
+	font-size: 20px;
+}
+
+.user-name{
+	font-size: 20px;
+}
+
+.user-lastname{
+	font-size: 20px;
+}
+
+button{
+	border-radius: 15px;
+	background-color: #9999CC;
+	height: 40px;
+	width: 150px;
+	font-size: 16px; 
+	border: none;
+
+}
+
+button:hover{
+	background-color: #96ADFC;
+}
+
+.fa, .fab, .fal, .far, .fas {
+	color: red;
+}
+
+}
+
+
+
