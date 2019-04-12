@@ -4,14 +4,14 @@ import {logout,observer} from './../js/auth.js';
 
 
 export const templateWall = () =>{
-	observer();
+
 	const user = firebase.auth().currentUser;
 	if(user == null){
 		alert('Para crear el post debes iniciar sesión')
 		return
 	}
 	
-	
+	observer();
 	let profileName=firebase.auth().currentUser.name;
 	if(firebase.auth().currentUser.displayName){	
 		console.log("Está pasando por el if indefinido")
@@ -103,3 +103,7 @@ export const templateWall = () =>{
 
 return containerWall;
 };
+
+export const Printpost=()=>{
+	
+}
