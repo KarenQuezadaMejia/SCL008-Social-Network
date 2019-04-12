@@ -59,9 +59,7 @@ export const templateWall = () =>{
 										    <label class='click-counter-likes' id='click-counter-likes'></label>
 										    <img src='./assets/img/like.svg' alt='' id='like-btn' class='img-icon-post'>
 									    </div> 
-										<p>Comentarios:</p>
-												<textarea id='comment' placeholder='Ingresa tu comentario'></textarea>
-												<button type='button' class='publish' id='btn-comment'>Publicar</button>
+										
 										</element>
   	                     
   	                        `
