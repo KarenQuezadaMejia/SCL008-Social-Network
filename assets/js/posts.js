@@ -1,6 +1,5 @@
 import {checkPost} from '../js/validation.js'
 
-//var db = firebase.firestore();
 //Función que pasa la data del post a firestore  
 export const newPost=(userId,title,author,rate,opinion) =>{
     if(checkPost(title,author)){  
