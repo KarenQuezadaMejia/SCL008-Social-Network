@@ -3,36 +3,40 @@
 
 }
 body{
-	background-color: #96ADFC;
+	background-color: #e2e2f3 !important;;
 	font-family: 'Merriweather', serif;
 	font-size: 20px;
 	margin: auto;
-	color: #606060;	
+	color: 	rgb(148, 170, 241);
+	background-image: url('./books.png');
+	background-size: 250px;
 }
 
-#logOut{
-	background-color:  #DBE1F1;
-	color: #606060;
+button#logOut{
+	background-color:  #f1f1f1 !important;
+	color: 	rgb(148, 170, 241);
 }
 
 #root{	
 	margin: auto;
 	text-align: center;
 	width: 700px;
-	background-color: #DBE1F1;
+	background-color: #ffffff !important;
 	margin-bottom: 20px;
 	margin-top: 30px;
-	padding-bottom: 20px;			
+	padding-bottom: 20px;
+	border-top-style: outset;
+	border-bottom-style: inset;
+	color: #9999CC;		
 }
 
 .logo-img {
     width: 200px;
-    text-align: center;
+	text-align: center;
   }
 
 button{
-	border-radius: 15px;
-	background-color: #CCCCFF	;
+	border-radius: 15px;;
 	height: 40px;
 	width: 150px;
 	font-size: 16px; 
@@ -43,6 +47,7 @@ button{
 
 #logOut{
 	color: #606060;
+	background-color: #ffffff;
 }
 
 header{
@@ -52,6 +57,7 @@ header{
 a{
 	margin-right: 10px;
 	text-decoration: none;
+	color:rgb(148, 170, 241) !important;
 }
 
 
@@ -68,6 +74,7 @@ h3{
 }
 h4{
 	margin-top: 30px;
+	color: #96ADFC;
 }
 
 #content-publish{
@@ -87,8 +94,12 @@ p{
 textarea{
 	width: 200px;
 	height: 150px;
+	border-top-style: outset !important;
+	border-bottom-style: inset !important;
 }
-
+.option{
+	margin-top: 10px !important;
+}
 input{
 	text-align: center;
 }
@@ -100,7 +111,7 @@ input{
 	}
 
 #logOut{
-	background-color: #DBE1F1;
+	background-color: #ffffff;
 }
 
 #root{
@@ -116,7 +127,7 @@ input{
 }
 
 #logOut{
-	background-color:  #DBE1F1;
+	background-color:  #ffffff;
 	color: #606060;
 }
 .signin-container{
@@ -127,16 +138,19 @@ input{
   .logo-img {
     width: 80px;
     text-align: center;
-    margin-top: none;
+	margin-top: none;
   }
 
   .email{
 	font-size: 20px;
-
+	border-style: groove !important;
+	border-color: #9999CC;
 }
 
 .password{
 	font-size: 20px;
+	border-style: groove !important;
+	border-color: #9999CC;
 }
 p{
 	padding: 0px;
@@ -147,7 +161,6 @@ p{
 	border-radius: 100px;
 	width: 200px;
 }
-
 
 }
 

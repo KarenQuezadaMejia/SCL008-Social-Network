@@ -31,13 +31,13 @@ export const templateProfile=() =>{
 				<div id="content-publish">
 					<h4>Realiza publicaciones de los libros que tienes disponibles
 para prestamo</h4>
-				<p>Titulo: </p>
+				<p class="option">Titulo: </p>
 <input type="text" name="title" placeholder="Ingresa el Titulo 
 del Libro">
-				<p>Autor: </p>
+				<p class="option">Autor: </p>
 				<span><input type="text" name="title" placeholder="Ingresa el autor"></span>
-				<p>Calificación</p>
-				<p>Opinión Personal</p>
+				<p class="option">Calificación</p>
+				<p class="option">Opinión Personal</p>
 <textarea id="opinion" placeholder="Ingresa tu opinión del 
 Libro"></textarea>
 				</div>
